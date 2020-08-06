@@ -12,16 +12,11 @@ const Accordion = props => {
     setActive(!active)
   }
 
-  const titleStyle = {
-    fontWeight: 600,
-    fontSize: '17px',
-    fontFamily: 'Raleway, sans-serif'
-  }
 
   return (
     <div className="accordion-section">
       <button className="accordion-title" onClick={toogleActive}>
-        <p style={titleStyle}>{props.title}</p>
+        <div className="accordion-title">{props.title}</div>
         {active ? <div className="expand">⊖</div> : <div className="expanded">⊕</div>}
       </button>
 
