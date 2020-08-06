@@ -36,6 +36,7 @@ p {
   font-family: 'Anonymous Pro', monospace;
   font-size: 15px;
   text-align: center;
+  color: gray;
 }
 
 span {
@@ -50,5 +51,14 @@ span {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 11px;
   }
 }
