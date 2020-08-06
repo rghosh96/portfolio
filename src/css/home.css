@@ -1,0 +1,42 @@
+.home {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    color:pink;
+    padding: 15px;
+}
+
+.expand {
+    opacity: .5;
+}
+
+.expand:hover {
+    opacity: 1;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.expanded {
+    color: pink;
+}
+
+.expanded:hover {
+    opacity: .5;
+    transition: all .5s ease;
+    cursor: pointer;
+}
