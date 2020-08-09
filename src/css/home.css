@@ -15,12 +15,18 @@ font-family: 'Raleway', sans-serif; */
     padding: 0 50px 50px 50px;
 }
 
-img {
+.titlePic {
     justify-self: center;
     position: relative;
     width: 100%;
     text-align: center;
     margin-top: -90px;
+}
+
+.socialMediaIcons {
+    width: 25px;
+    height: 25px;
+    margin: 0;
 }
 
 .menu {
@@ -83,6 +89,38 @@ img {
     font-size: 14px;
     padding: 18px;
     color: gray;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .stuff {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .label {
+      font-weight: bold;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      color: lightgray;
+  }
+
+  .description {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 21px;
+  }
+
+  .subtitle {
+      text-align: center;
   }
 
   hr {

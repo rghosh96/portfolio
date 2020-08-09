@@ -36,8 +36,9 @@ h2 {
 p {
   font-family: 'Anonymous Pro', monospace;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   color: gray;
+  margin: 0;
 }
 
 span {
