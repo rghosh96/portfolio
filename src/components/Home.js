@@ -116,10 +116,17 @@ export default function Home() {
            </span>
       </Accordion>
       <Accordion title="ingredients">
-        <span className="accordion-text">coming soon! :) </span>
+        <span className="accordion-text">
+          <a href="/portfolio/healthcare">healthcare keynotes ▶</a>
+          <a href="/portfolio/healthcare">art portfolio ▶</a>
+          <a href="/portfolio/healthcare">writing/essays ▶</a>
+        </span>
       </Accordion>
       <Accordion title="nutrition facts">
-        <span className="accordion-text">coming soon! :) </span>
+        <span className="accordion-text">
+          <a href="/portfolio/healthcare">coding projects ▶</a>
+          <a href="/portfolio/healthcare">resume ▶</a>
+        </span>
       </Accordion>
 
       <Accordion title="contact">

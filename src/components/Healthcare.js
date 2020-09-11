@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Healthcare() {
   return (
-    <div className="explore">
-        <h1>explore</h1>
+    <div className="healthcare">
+        <h1>healthcare keynote presentations</h1>
     </div>
   );
 }

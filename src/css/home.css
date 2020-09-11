@@ -38,6 +38,22 @@ font-family: 'Anonymous Pro', monospace; */
     
 }
 
+a {
+  text-decoration: none;
+  color: rgb(169, 182, 145) !important;
+  font-weight: 900;
+  font-size: 17px;
+  font-family: 'Anonymous Pro', monospace;
+  margin: 2px;
+  transition: .2s ease-out;
+}
+
+a:hover {
+  color: rgb(158, 175, 125) !important;
+  text-decoration: none !important;
+  letter-spacing: 1px;
+}
+
 .modalContainer {
   padding: 50px;
 }
