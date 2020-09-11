@@ -38,6 +38,15 @@ font-family: 'Anonymous Pro', monospace; */
     
 }
 
+.modalContainer {
+  padding: 50px;
+}
+
+.modal-header {
+  font-family: 'Cedarville Cursive', cursive;
+  color: grey;
+}
+
 .accordion-section {
     display: flex;
     flex-direction: column;
@@ -169,9 +178,9 @@ font-family: 'Anonymous Pro', monospace; */
   }
 
   .submit {
-      border: none;
+      border: none !important;
       color: white;
-      background-color: pink;
+      background-color: pink !important;
       font-family: 'Raleway', sans-serif;
       text-transform: uppercase;
       padding: 5px;

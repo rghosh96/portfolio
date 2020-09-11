@@ -1,27 +1,56 @@
-import React  from 'react';
+import React, {useState}  from 'react';
 import '../css/home.css';
 import Accordion from './Accordian.js'
 import pic from './flowers.png';
 import fb from '../images/fb.png'
 import ig from '../images/ig.png'
 import lin from '../images/in.png'
-import { Button } from 'react-bootstrap'
-import { useFormik } from 'formik';
+import { Button, Modal } from 'react-bootstrap'
+import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup'; // for everything
 import * as emailjs from 'emailjs-com'
- 
+
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <div class="modalContainer">
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          message received
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <p>
+          your message has been successfully submitted! i usually respond within 1-3 days, weekends included (: 
+        </p>
+      </Modal.Body>
+      </div>
+    </Modal>
+  );
+}
 
 export default function Home() {
+
+  const [modalShow, setModalShow] = React.useState(false);
+
+
+
   const validationSchema = Yup.object({
     name: Yup.string().required("required!!!"),
     email: Yup.string().email('invalid email!!!').required("required!!!"),
     message: Yup.string().required("required!!!")
   })
-  const onSubmit = values => {
+  const onSubmit = (values, {resetForm}) => {
     console.log('From data', values)
     const templateId = 'template_Dg3tjjcj'
     const userId = 'user_w3c2u4nu8EpxOsOSsunzt'
     sendFeedback(templateId, {message_html: formik.values.message, from_name: formik.values.name, reply_to: formik.values.email}, userId)
+    resetForm();
   }
 
   const sendFeedback = (templateId, variables, userId) => {
@@ -31,7 +60,7 @@ export default function Home() {
       variables, userId
       ).then(res => {
         console.log('Email successfully sent!')
-        alert("email successfully sent! i usually respond within 1-3 days :)")
+        setModalShow(true);
       })
       // Handle errors here however you like, or use a React error boundary
       .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
@@ -124,6 +153,13 @@ export default function Home() {
       </Accordion>
       </div>
       </div>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
+      
         </div>
     )
   }
