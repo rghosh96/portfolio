@@ -7,22 +7,34 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    align-items: center;
+  html, body, #root {
     background: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.text};
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    height: 100% !important;
     margin: 0;
-    padding: 0;
+    padding: 1px 0;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
   }
 
+
+  .title {
+    color: ${({ theme }) => theme.gold};
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+
   .subtitle {
     color: ${({ theme }) => theme.text};
+  }
+
+  hr {
+    background-color: ${({ theme }) => theme.gold}!important;
+    height: 0.5px !important;
+    width: 50%;
   }
   
   .btn-link {

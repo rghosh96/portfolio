@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from './components/Home'
+import HomePage from './components/Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import { GlobalStyles } from './styles/global';
+import './css/master.scss';
+import Toggle from './components/Toggle';
 
 
-
-function App() {
+function App(props) {
   const [theme, setTheme] = useState('light');
 
 // The function that toggles between themes
@@ -22,17 +23,18 @@ const toggleTheme = () => {
   }
 }
 
+
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <div>
+      <div className="container">
+      <Toggle theme={theme} toggleTheme={toggleTheme}>Toggle theme</Toggle>
       <GlobalStyles />
-      <button onClick={toggleTheme}>Toggle theme</button>
       <BrowserRouter>
       <Switch>
-        <Route exact path="/portfolio/" component={Home} />
+        <Route exact path="/portfolio/" component={HomePage} />
       </Switch>
       </BrowserRouter>
-    </div>
+      </div>
     </ThemeProvider>
     
   );

@@ -4,10 +4,12 @@ import '../css/master.scss';
 import Button from 'react-bootstrap/Button'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { withTheme } from 'styled-components'
 
-export default function Home() {
+const Home = (props) => {
+  console.log(props)
     return (
-      <div >
+      <div className="home-container">
         <div className="home">
           <h1 className="title">rashi ghosh</h1>
           <p className="subtitle">computer science BA | UI/UX fanatic | graphic design hobbiest</p>
@@ -15,28 +17,28 @@ export default function Home() {
           <div className="nav">
             <Button variant="link" >
               <FontAwesomeIcon
-                color={"white"}
+                color={props.theme.gold}
                 icon={faUserCircle} 
                 size='2x'
               />
             </Button>
             <Button variant="link"  >
             <FontAwesomeIcon
-                color={"white"}
+                color={props.theme.gold}
                 icon={faFileAlt} 
                 size='2x'
               />
             </Button>
             <Button variant="link"  >
             <FontAwesomeIcon
-                color={"white"}
+                color={props.theme.gold}
                 icon={faCode} 
                 size='2x'
               />
             </Button>
             <Button variant="link"  >
             <FontAwesomeIcon
-                color={"white"}
+                color={props.theme.gold}
                 icon={faEnvelope} 
                 size='2x'
               />
@@ -46,3 +48,6 @@ export default function Home() {
       </div>
     )
   }
+
+  const HomePage = withTheme(Home);
+  export default HomePage;
