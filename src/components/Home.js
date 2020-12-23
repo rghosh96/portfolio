@@ -7,34 +7,34 @@ import { faUserCircle, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-s
 
 export default function Home() {
     return (
-      <div className="container dark">
+      <div >
         <div className="home">
           <h1 className="title">rashi ghosh</h1>
           <p className="subtitle">computer science BA | UI/UX fanatic | graphic design hobbiest</p>
           <hr />
           <div className="nav">
-            <Button  >
+            <Button variant="link" >
               <FontAwesomeIcon
                 color={"white"}
                 icon={faUserCircle} 
                 size='2x'
               />
             </Button>
-            <Button >
+            <Button variant="link"  >
             <FontAwesomeIcon
                 color={"white"}
                 icon={faFileAlt} 
                 size='2x'
               />
             </Button>
-            <Button >
+            <Button variant="link"  >
             <FontAwesomeIcon
                 color={"white"}
                 icon={faCode} 
                 size='2x'
               />
             </Button>
-            <Button >
+            <Button variant="link"  >
             <FontAwesomeIcon
                 color={"white"}
                 icon={faEnvelope} 
