@@ -2,11 +2,14 @@
 @import "fonts";
 
 .title {
-  font-family: $sans-serif;
   color: $gold;
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 5px;
+}
+
+.subtitle {
+  color: $light-grey;
 }
 
 .home {

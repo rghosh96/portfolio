@@ -9,7 +9,8 @@ export default function Home() {
     return (
       <div className="container dark">
         <div className="home">
-          <div className="title">rashi ghosh</div>
+          <h1 className="title">rashi ghosh</h1>
+          <p className="subtitle">computer science BA | UI/UX fanatic | graphic design hobbiest</p>
           <hr />
           <div className="nav">
             <Button  >
