@@ -1,13 +1,15 @@
 export const lightTheme = {
   mode: 'light',
-    bg: '#E2E2E2',
-    text: '#525252',
-    lightShadow: '#FFFFFF',
-    darkShadow: '#949494',
-    gold: '#e3a813',
-    toggleBorder: '#FFF',
-    gradient: 'linear-gradient(#39598A, #79D7ED)',
-  }
+  bg: '#E2E2E2',
+  text: '#525252',
+  lightShadow: '#FFFFFF',
+  darkShadow: '#949494',
+  gold: '#e3a813',
+
+  cursive: '"Cedarville Cursive", cursive',
+  sansSerif: '"Raleway", sans-serif',
+  code: '"Anonymous Pro", monospace',
+}
   
   export const darkTheme = {
     mode: 'dark',
@@ -16,6 +18,8 @@ export const lightTheme = {
     lightShadow: '#7a7a7a',
     darkShadow: '#000000',
     gold: '#e3a813',
-    toggleBorder: '#6B8096',
-    gradient: 'linear-gradient(#091236, #1E215D)',
+
+    cursive: '"Cedarville Cursive", cursive',
+    sansSerif: '"Raleway", sans-serif',
+    code: '"Anonymous Pro", monospace',
   }

@@ -11,8 +11,9 @@ const Home = (props) => {
     return (
       <div className="home-container">
         <div className="home">
+          <h1 className="logo">rg</h1>
           <h1 className="title">rashi ghosh</h1>
-          <p className="subtitle">computer science BA | UI/UX fanatic | graphic design hobbiest</p>
+          <p className="subtitle">computer science BS | UI/UX fanatic | graphic design hobbiest</p>
           <hr />
           <div className="nav">
             <Button variant="link" >

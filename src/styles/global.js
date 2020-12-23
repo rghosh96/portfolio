@@ -19,12 +19,22 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 
+  .logo {
+    color: ${({ theme }) => theme.gold};
+    font-family: ${({ theme }) => theme.cursive}!important;
+    opacity: .2;
+    font-size: 105px;
+    letter-spacing: 3px;
+    line-height: 2px;
+  }
 
   .title {
     color: ${({ theme }) => theme.gold};
     text-transform: uppercase;
     font-size: 25px;
     letter-spacing: 5px;
+    z-index: 5;
+    font-weight: 900px;
   }
 
   .subtitle {
