@@ -39,12 +39,12 @@ const Toggle = ({ theme, toggleTheme }) => {
   return (
     <ToggleContainer onClick={toggleTheme} >
        <FontAwesomeIcon className="light"
-                color={"white"}
+                color={"#e3a813"}
                 icon={faSun} 
                 size='2x'
               />
        <FontAwesomeIcon className="dark"
-                color={"white"}
+                color={"#e3a813"}
                 icon={faMoon} 
                 size='2x'
               />
