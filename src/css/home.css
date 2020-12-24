@@ -1,5 +1,3 @@
-@import "fonts";
-
 .home-container {
   padding: 0px 20px 00px 20px !important;
   display: flex;
@@ -27,4 +25,18 @@
 
 .btn-link:hover {
   transform: translateY(-7px);
+}
+
+hr {
+  -webkit-animation: lineDraw 1s;
+  -moz-animation: lineDraw 1s;
+  -o-animation: lineDraw 1s;
+  animation: lineDraw 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lineDraw {
+  100% {
+    width: 50%;
+  }
 }

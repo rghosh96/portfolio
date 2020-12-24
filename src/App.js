@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
 import { GlobalStyles } from './styles/global';
-import './css/master.scss';
-import Toggle from './components/Toggle';
+import './css/master.css';
+import ToggleSwitch from './components/Toggle';
 
 
 function App(props) {
@@ -27,7 +27,7 @@ const toggleTheme = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <div className="container">
-      <Toggle theme={theme} toggleTheme={toggleTheme}>Toggle theme</Toggle>
+      <ToggleSwitch theme={theme === 'light' ? lightTheme : darkTheme} toggleTheme={toggleTheme}>Toggle theme</ToggleSwitch>
       <GlobalStyles />
       <BrowserRouter>
       <Switch>

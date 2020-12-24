@@ -1,45 +1,44 @@
 import React from 'react'
-import '../css/home.scss';
-import '../css/master.scss';
+import '../css/home.css';
+import '../css/master.css';
 import Button from 'react-bootstrap/Button'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { withTheme } from 'styled-components'
 
 const Home = (props) => {
-  console.log(props)
     return (
       <div className="home-container">
         <div className="home">
           <h1 className="logo">rg</h1>
           <h1 className="title">rashi ghosh</h1>
-          <p className="subtitle">computer science BS | UI/UX fanatic | graphic design hobbiest</p>
+          <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />
           <div className="nav">
             <Button variant="link" >
               <FontAwesomeIcon
-                color={props.theme.gold}
+                color={props.theme.accent}
                 icon={faUserCircle} 
                 size='2x'
               />
             </Button>
             <Button variant="link"  >
             <FontAwesomeIcon
-                color={props.theme.gold}
+                color={props.theme.accent}
                 icon={faFileAlt} 
                 size='2x'
               />
             </Button>
             <Button variant="link"  >
             <FontAwesomeIcon
-                color={props.theme.gold}
+                color={props.theme.accent}
                 icon={faCode} 
                 size='2x'
               />
             </Button>
             <Button variant="link"  >
             <FontAwesomeIcon
-                color={props.theme.gold}
+                color={props.theme.accent}
                 icon={faEnvelope} 
                 size='2x'
               />

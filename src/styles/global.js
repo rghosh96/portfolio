@@ -19,17 +19,25 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 
+  h1 {
+    font-family: ${({ theme }) => theme.sansSerif};
+  }
+  
+  p {
+    font-family: ${({ theme }) => theme.sansSerif};
+  }
+
   .logo {
-    color: ${({ theme }) => theme.gold};
+    color: ${({ theme }) => theme.accent};
     font-family: ${({ theme }) => theme.cursive}!important;
     opacity: .2;
-    font-size: 105px;
+    font-size: 125px;
     letter-spacing: 3px;
     line-height: 2px;
   }
 
   .title {
-    color: ${({ theme }) => theme.gold};
+    color: ${({ theme }) => theme.accent};
     text-transform: uppercase;
     font-size: 25px;
     letter-spacing: 5px;
@@ -39,12 +47,13 @@ export const GlobalStyles = createGlobalStyle`
 
   .subtitle {
     color: ${({ theme }) => theme.text};
+    text-align: center;
   }
 
   hr {
-    background-color: ${({ theme }) => theme.gold}!important;
+    background-color: ${({ theme }) => theme.accent}!important;
     height: 0.5px !important;
-    width: 50%;
+    width: 10%;
   }
   
   .btn-link {

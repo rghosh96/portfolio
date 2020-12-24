@@ -1,19 +1,19 @@
 import React from 'react'
-import { func, string } from 'prop-types';
 import styled from 'styled-components';
-// Import a couple of SVG files we'll use in the design: https://www.flaticon.com
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 
 const ToggleContainer = styled.button`
   background: ${({ theme }) => theme.bg};
-  border: 2px solid ${({ theme }) => theme.gold};
+  border: none;
+  box-shadow: 8px 8px 12px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
   border-radius: 30px;
   cursor: pointer;
   position: absolute;
   right: 20px;
-  padding: 9px;
+  padding: 13px;
   top: 20px;
   font-size: 0.5rem;
   display: flex;
@@ -36,15 +36,16 @@ const ToggleContainer = styled.button`
 `;
 
 const Toggle = ({ theme, toggleTheme }) => {
+  console.log(theme)
   return (
     <ToggleContainer onClick={toggleTheme} >
        <FontAwesomeIcon className="light"
-                color={"#e3a813"}
+                color={theme.accent}
                 icon={faSun} 
                 size='2x'
               />
        <FontAwesomeIcon className="dark"
-                color={"#e3a813"}
+                color={theme.accent}
                 icon={faMoon} 
                 size='2x'
               />
@@ -52,9 +53,5 @@ const Toggle = ({ theme, toggleTheme }) => {
   );
 };
 
-Toggle.propTypes = {
-  theme: string.isRequired,
-  toggleTheme: func.isRequired,
-}
 
 export default Toggle;
