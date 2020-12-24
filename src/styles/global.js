@@ -53,7 +53,7 @@ export const GlobalStyles = createGlobalStyle`
   hr {
     background-color: ${({ theme }) => theme.accent}!important;
     height: 0.5px !important;
-    width: 10%;
+    width: 0%;
   }
   
   .btn-link {
@@ -73,5 +73,24 @@ export const GlobalStyles = createGlobalStyle`
   .btn-link:focus {
   box-shadow: 10px 10px 16px 0 ${({ theme }) => theme.darkShadow} inset,
     -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} inset !important;
+  }
+
+.diamond {
+  margin-bottom: 20px;
 }
+
+.diamond:nth-child(2) {
+  margin-left: -67px;
+  transform: rotateY(45deg);
+}
+
+.diamond:nth-child(3) {
+  margin-left: -66px;
+  transform: rotateY(65deg);
+}
+
+   .diamond path {
+    stroke: ${({ theme }) => theme.accent};
+   }
+
 `

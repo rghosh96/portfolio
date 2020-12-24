@@ -28,15 +28,59 @@
 }
 
 hr {
-  -webkit-animation: lineDraw 1s;
-  -moz-animation: lineDraw 1s;
-  -o-animation: lineDraw 1s;
-  animation: lineDraw 1s;
+  -webkit-animation: lineDraw 2s;
+  -moz-animation: lineDraw 2s;
+  -o-animation: lineDraw 2s;
+  animation: lineDraw 2s;
   animation-fill-mode: forwards;
+}
+
+.logo {
+  -webkit-animation: swirl 2s;
+  -moz-animation: swirl 2s;
+  -o-animation: swirl 2s;
+  animation: swirl 2s;
+}
+
+.diamond:nth-child(1) {
+  animation: rotate 3s infinite;
+}
+.diamond:nth-child(2) {
+  animation: rotate1 5s infinite;
+}
+.diamond:nth-child(3) {
+  animation: rotate2 7s infinite;
 }
 
 @keyframes lineDraw {
   100% {
     width: 50%;
+  }
+}
+
+@keyframes swirl {
+  from {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  to {
+    opacity: 0.2;
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate1 {
+  100% {
+    transform: rotateY(270deg);
+  }
+}
+@keyframes rotate2 {
+  100% {
+    transform: rotateY(90deg);
   }
 }

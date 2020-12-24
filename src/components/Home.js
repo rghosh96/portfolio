@@ -5,11 +5,17 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { withTheme } from 'styled-components'
+import {ReactComponent as Diamond } from '../css/diamond.svg'
 
 const Home = (props) => {
     return (
       <div className="home-container">
         <div className="home">
+          <div className="diamond-container">
+        <Diamond className="diamond"></Diamond>
+        <Diamond className="diamond"></Diamond>
+        <Diamond className="diamond"></Diamond>
+        </div>
           <h1 className="logo">rg</h1>
           <h1 className="title">rashi ghosh</h1>
           <p className="subtitle">computer scientist | software engineer | developer</p>
