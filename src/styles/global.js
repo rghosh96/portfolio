@@ -37,12 +37,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .title {
+    font-family: ${({ theme }) => theme.sansSerif};
     color: ${({ theme }) => theme.accent};
     text-transform: uppercase;
-    font-size: 25px;
-    letter-spacing: 5px;
+    font-size: 39px;
     z-index: 5;
     font-weight: 900px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 
   .subtitle {
@@ -80,17 +82,18 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 .diamond:nth-child(2) {
-  margin-left: -67px;
+  margin-left: -33px;
   transform: rotateY(45deg);
 }
 
 .diamond:nth-child(3) {
-  margin-left: -66px;
+  margin-left: -33px;
   transform: rotateY(65deg);
 }
 
    .diamond path {
-    stroke: ${({ theme }) => theme.accent};
+    stroke: ${({ theme }) => theme.accent} !important;
+    stroke-width: 19 !important;
    }
 
 `

@@ -11,13 +11,23 @@ const Home = (props) => {
     return (
       <div className="home-container">
         <div className="home">
-          <div className="diamond-container">
-        <Diamond className="diamond"></Diamond>
-        <Diamond className="diamond"></Diamond>
-        <Diamond className="diamond"></Diamond>
-        </div>
           <h1 className="logo">rg</h1>
-          <h1 className="title">rashi ghosh</h1>
+          <div>
+            <span className="title">r</span>
+            <span>
+              <Diamond className="diamond"></Diamond>
+              <Diamond className="diamond"></Diamond>
+              <Diamond className="diamond"></Diamond>
+            </span>
+            <span className="title">s</span>
+            <span className="title">h</span>
+            <span className="title">i &nbsp;</span>
+            <span className="title">g</span>
+            <span className="title">h</span>
+            <span className="title">o</span>
+            <span className="title">s</span>
+            <span className="title">h</span>
+          </div>
           <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />
           <div className="nav">
