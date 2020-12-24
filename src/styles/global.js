@@ -58,7 +58,7 @@ export const GlobalStyles = createGlobalStyle`
   
   .btn-link {
     padding: 15px !important;
-    margin: 10px !important;
+    margin: 20px !important;
     border: none !important;
     border-radius: 25px !important;
     transition: 0.3s ease-in-out !important;
@@ -66,8 +66,8 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 50px;
     box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
   }
 
   .btn-link:focus {
