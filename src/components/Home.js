@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/home.css';
 import '../css/master.css';
 import Button from 'react-bootstrap/Button'; 
@@ -6,8 +6,51 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
+import AboutPage from './About';
+import ResumePage from './Resume';
+import ProjectsPage from './Projects';
+import ContactPage from './Contact';
 
 const Home = (props) => {
+  const [about, setAbout] = useState(false);
+  const [resume, setResume] = useState(false);
+  const [projects, setProjects] = useState(false);
+  const [contact, setContact] = useState(false);
+
+  const linkClicked = (link) => {
+    switch(link) {
+      case "about":
+        setAbout(!about);
+        setResume(false);
+        setProjects(false);
+        setContact(false);
+        break;
+      case "resume":
+        setResume(!resume)
+        setAbout(false);
+        setProjects(false);
+        setContact(false);
+        break;
+      case "projects":
+        setProjects(!projects);
+        setResume(false);
+        setAbout(false);
+        setContact(false);
+        break;
+      case "contact":
+        setContact(!contact)
+        setResume(false);
+        setProjects(false);
+        setAbout(false);
+        break;
+      default:
+        break;
+    }
+    
+  }
+
+
+
     return (
       <div className="home-container">
         <div className="home">
@@ -35,28 +78,28 @@ const Home = (props) => {
           <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />
           <div className="nav">
-            <Button variant="link" >
+            <Button variant={about ? "primary" : "link"} onClick={() => linkClicked("about")}>
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faUserCircle} 
                 size='2x'
               />
             </Button>
-            <Button variant="link"  >
+            <Button variant={resume ? "primary" : "link"}  onClick={() => linkClicked("resume")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faFileAlt} 
                 size='2x'
               />
             </Button>
-            <Button variant="link"  >
+            <Button variant={projects ? "primary" : "link"}  onClick={() => linkClicked("projects")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faCode} 
                 size='2x'
               />
             </Button>
-            <Button variant="link"  >
+            <Button variant={contact ? "primary" : "link"}  onClick={() => linkClicked("contact")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faEnvelope} 
@@ -64,6 +107,10 @@ const Home = (props) => {
               />
             </Button>
           </div>
+          {about ? <AboutPage /> : null }
+          {resume ? <ResumePage /> : null }
+          {projects ? <ProjectsPage /> : null }
+          {contact ? <ContactPage /> : null }
         </div>
       </div>
     )

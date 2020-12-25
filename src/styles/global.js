@@ -70,11 +70,24 @@ export const GlobalStyles = createGlobalStyle`
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
     height: 65px;
     width: 65px;
+    &:focus {
+      box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+    }
   }
 
-  .btn-link:focus {
-  box-shadow: 10px 10px 16px 0 ${({ theme }) => theme.darkShadow} inset,
+  .btn-primary {
+    padding: 15px !important;
+    margin: 20px !important;
+    border: none !important;
+    border-radius: 25px !important;
+    transition: 0.3s ease-in-out !important;
+    background: ${({ theme }) => theme.bg} !important;
+    border-radius: 50px;
+    box-shadow: 10px 10px 16px 0 ${({ theme }) => theme.darkShadow} inset,
     -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} inset !important;
+    height: 65px;
+    width: 65px;
   }
 
 .diamond {

@@ -31,7 +31,7 @@ const toggleTheme = () => {
       <GlobalStyles />
       <BrowserRouter>
       <Switch>
-        <Route exact path="/portfolio/" component={HomePage} />
+        <Route exact path="/portfolio" component={HomePage} />
       </Switch>
       </BrowserRouter>
       </div>
