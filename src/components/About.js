@@ -2,7 +2,6 @@ import React from 'react'
 import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
-import { motion, AnimatePresence } from "framer-motion"
 
 const About = (props) => {
     return (
