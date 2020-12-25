@@ -12,7 +12,8 @@ const Home = (props) => {
       <div className="home-container">
         <div className="home">
           <h1 className="logo">rg</h1>
-          <div>
+          <div className="title-container">
+            <div>
             <span className="title">r</span>
             <span>
               <Diamond className="diamond"></Diamond>
@@ -22,11 +23,14 @@ const Home = (props) => {
             <span className="title">s</span>
             <span className="title">h</span>
             <span className="title">i &nbsp;</span>
+            </div>
+            <div>
             <span className="title">g</span>
             <span className="title">h</span>
             <span className="title">o</span>
             <span className="title">s</span>
             <span className="title">h</span>
+            </div>
           </div>
           <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />

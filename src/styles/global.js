@@ -40,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.sansSerif};
     color: ${({ theme }) => theme.accent};
     text-transform: uppercase;
-    font-size: 39px;
+    font-size: 27px;
     z-index: 5;
     font-weight: 900px;
     margin-right: 5px;
@@ -78,16 +78,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 .diamond {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
+  width: 23px !important;
 }
 
 .diamond:nth-child(2) {
-  margin-left: -33px;
+  margin-left: -23px;
   transform: rotateY(45deg);
 }
 
 .diamond:nth-child(3) {
-  margin-left: -33px;
+  margin-left: -23px;
   transform: rotateY(65deg);
 }
 
