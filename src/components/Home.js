@@ -10,12 +10,15 @@ import AboutPage from './About';
 import ResumePage from './Resume';
 import ProjectsPage from './Projects';
 import ContactPage from './Contact';
+import { motion, AnimatePresence } from "framer-motion"
 
 const Home = (props) => {
   const [about, setAbout] = useState(false);
   const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
   const [contact, setContact] = useState(false);
+
+  const [show, setShow] = useState(false)
 
   const linkClicked = (link) => {
     switch(link) {
@@ -52,7 +55,7 @@ const Home = (props) => {
 
 
     return (
-      <div className="home-container">
+      <div className="home-container">  
         <div className="home">
           <h1 className="logo">rg</h1>
           <div className="title-container">
@@ -107,6 +110,7 @@ const Home = (props) => {
               />
             </Button>
           </div>
+
           {about ? <AboutPage /> : null }
           {resume ? <ResumePage /> : null }
           {projects ? <ProjectsPage /> : null }

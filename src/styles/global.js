@@ -22,9 +22,15 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     font-family: ${({ theme }) => theme.sansSerif};
   }
+
+  h2 {
+    font-family: ${({ theme }) => theme.cursive};
+    color: ${({ theme }) => theme.accent};
+  }
   
   p {
     font-family: ${({ theme }) => theme.sansSerif};
+    font-size: 13px;
   }
 
   .logo {

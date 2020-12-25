@@ -2,12 +2,14 @@ import React from 'react'
 import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
+import { motion, AnimatePresence } from "framer-motion"
 
 const About = (props) => {
     return (
       <div className="about-container">
-        <h1>about</h1>
-        <p>hello</p>
+        <h2>about</h2>
+        <p>born in queens, NY, grew up in north/northwest Arkansas. </p>
+        <p>24 years old (oct 1 1996)</p>
       </div>
     )
   }

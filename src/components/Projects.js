@@ -6,7 +6,7 @@ import { withTheme } from 'styled-components'
 const Projects = (props) => {
     return (
       <div className="about-container">
-        <h1>projects</h1>
+        <h2>projects</h2>
         <p>hello</p>
       </div>
     )
