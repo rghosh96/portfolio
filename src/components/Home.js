@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import '../css/home.css';
 import '../css/master.css';
 import Button from 'react-bootstrap/Button'; 
@@ -16,6 +16,8 @@ const Home = (props) => {
   const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
   const [contact, setContact] = useState(false);
+
+  const ref = useRef(null);
 
   const linkClicked = (link) => {
     switch(link) {
@@ -46,7 +48,6 @@ const Home = (props) => {
       default:
         break;
     }
-    
   }
 
 
@@ -78,7 +79,7 @@ const Home = (props) => {
           <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />
           <div className="nav">
-            <Button variant={about ? "primary" : "link"} onClick={() => linkClicked("about")}>
+             <Button variant={about ? "primary" : "link"} onClick={() => linkClicked("about")}>
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faUserCircle} 
@@ -107,7 +108,6 @@ const Home = (props) => {
               />
             </Button>
           </div>
-
           {about ? <AboutPage /> : null }
           {resume ? <ResumePage /> : null }
           {projects ? <ProjectsPage /> : null }

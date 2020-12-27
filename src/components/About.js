@@ -3,6 +3,7 @@ import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
 
+
 const About = (props) => {
     return (
       <div className="about-container">

@@ -3,5 +3,17 @@
   flex-direction: column;
   transition: all 0.25s linear;
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  margin: 30px;
+  animation: appear 2s forwards;
+  opacity: 0;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,6 +1,7 @@
 .home-container {
-  padding: 0px 20px 00px 20px !important;
+  padding: 0px 20px 0px 20px !important;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   margin: 0 !important;
@@ -59,24 +60,6 @@ hr {
 }
 .diamond:nth-child(3) {
   animation: rotate2 7s infinite;
-}
-
-.page-enter {
-  opacity: 0;
-  transform: scale(0.9);
-}
-.page-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.page-exit {
-  opacity: 1;
-}
-.page-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
 }
 
 @keyframes lineDraw {
