@@ -11,6 +11,7 @@ import ResumePage from './Resume';
 import ProjectsPage from './Projects';
 import ContactPage from './Contact';
 import { useTransition, animated } from 'react-spring'
+import { Link } from 'react-scroll'
 
 const Home = (props) => {
   const [about, setAbout] = useState(false);
@@ -20,7 +21,7 @@ const Home = (props) => {
 
   const aboutTransition = useTransition(about, null, {
     from: { opacity: 0 },
-    enter: { opacity: 1, display: 'flex', width: '100%' },
+    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
     leave: { opacity: 0 },
     })
 
@@ -102,13 +103,14 @@ const Home = (props) => {
           <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />
           <div className="nav">
+            <Link to="aboutSection" smooth={true} duration={1000}>
              <Button variant={about ? "primary" : "link"} onClick={() => linkClicked("about")}>
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faUserCircle} 
                 size='2x'
               />
-            </Button>
+            </Button></Link>
             <Button variant={resume ? "primary" : "link"}  onClick={() => linkClicked("resume")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
@@ -131,6 +133,7 @@ const Home = (props) => {
               />
             </Button>
           </div>
+          <div id="aboutSection">
           {aboutTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><AboutPage/></animated.div>)}
           {resumeTransition.map(({ item, key, props }) =>
@@ -139,7 +142,7 @@ const Home = (props) => {
             item && <animated.div key={key} style={props}><ProjectsPage/></animated.div>)}
           {contactTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><ContactPage/></animated.div>)}
-        </div>
+        </div></div>
       </div>
     )
   }

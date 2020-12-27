@@ -26,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
   h2 {
     font-family: ${({ theme }) => theme.cursive};
     color: ${({ theme }) => theme.accent};
+    text-align: center;
   }
   
   p {
@@ -111,9 +112,29 @@ export const GlobalStyles = createGlobalStyle`
   transform: rotateY(65deg);
 }
 
-   .diamond path {
-    stroke: ${({ theme }) => theme.accent} !important;
-    stroke-width: 19 !important;
-   }
+.diamond path {
+stroke: ${({ theme }) => theme.accent} !important;
+stroke-width: 19 !important;
+}
+
+.diamond2 {
+  margin-top: 13px;
+  width: 35px !important;
+}
+
+.diamond2:nth-child(2) {
+  margin-left: -35px;
+  transform: rotateY(45deg);
+}
+
+.diamond2:nth-child(3) {
+  margin-left: -35px;
+  transform: rotateY(65deg);
+}
+
+.diamond2 path {
+  stroke: ${({ theme }) => theme.accent} !important;
+  stroke-width: 23 !important;
+  }
 
 `
