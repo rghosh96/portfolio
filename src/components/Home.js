@@ -10,6 +10,7 @@ import AboutPage from './About';
 import ResumePage from './Resume';
 import ProjectsPage from './Projects';
 import ContactPage from './Contact';
+import { useTransition, animated } from 'react-spring'
 
 const Home = (props) => {
   const [about, setAbout] = useState(false);
@@ -17,7 +18,29 @@ const Home = (props) => {
   const [projects, setProjects] = useState(false);
   const [contact, setContact] = useState(false);
 
-  const ref = useRef(null);
+  const aboutTransition = useTransition(about, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1, display: 'flex', width: '100%' },
+    leave: { opacity: 0 },
+    })
+
+  const resumeTransition = useTransition(resume, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1, display: 'flex', width: '100%' },
+    leave: { opacity: 0 },
+    })
+
+  const projectsTransition = useTransition(projects, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1, display: 'flex', width: '100%' },
+    leave: { opacity: 0 },
+    })
+
+  const contactTransition = useTransition(contact, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1, display: 'flex', width: '100%' },
+    leave: { opacity: 0 },
+    })
 
   const linkClicked = (link) => {
     switch(link) {
@@ -108,10 +131,14 @@ const Home = (props) => {
               />
             </Button>
           </div>
-          {about ? <AboutPage /> : null }
-          {resume ? <ResumePage /> : null }
-          {projects ? <ProjectsPage /> : null }
-          {contact ? <ContactPage /> : null }
+          {aboutTransition.map(({ item, key, props }) =>
+            item && <animated.div key={key} style={props}><AboutPage/></animated.div>)}
+          {resumeTransition.map(({ item, key, props }) =>
+            item && <animated.div key={key} style={props}><ResumePage/></animated.div>)}
+          {projectsTransition.map(({ item, key, props }) =>
+            item && <animated.div key={key} style={props}><ProjectsPage/></animated.div>)}
+          {contactTransition.map(({ item, key, props }) =>
+            item && <animated.div key={key} style={props}><ContactPage/></animated.div>)}
         </div>
       </div>
     )
