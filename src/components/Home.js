@@ -27,19 +27,19 @@ const Home = (props) => {
 
   const resumeTransition = useTransition(resume, null, {
     from: { opacity: 0 },
-    enter: { opacity: 1, display: 'flex', width: '100%' },
+    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center'},
     leave: { opacity: 0 },
     })
 
   const projectsTransition = useTransition(projects, null, {
     from: { opacity: 0 },
-    enter: { opacity: 1, display: 'flex', width: '100%' },
+    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
     leave: { opacity: 0 },
     })
 
   const contactTransition = useTransition(contact, null, {
     from: { opacity: 0 },
-    enter: { opacity: 1, display: 'flex', width: '100%' },
+    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center'},
     leave: { opacity: 0 },
     })
 
@@ -103,7 +103,7 @@ const Home = (props) => {
           <p className="subtitle">computer scientist | software engineer | developer</p>
           <hr />
           <div className="nav">
-            <Link to="aboutSection" smooth={true} duration={1000}>
+            <Link to="section" smooth={true} duration={1000}>
              <Button variant={about ? "primary" : "link"} onClick={() => linkClicked("about")}>
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -111,13 +111,14 @@ const Home = (props) => {
                 size='2x'
               />
             </Button></Link>
+            <Link to="section" smooth={true} duration={1000}>
             <Button variant={resume ? "primary" : "link"}  onClick={() => linkClicked("resume")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faFileAlt} 
                 size='2x'
               />
-            </Button>
+            </Button></Link>
             <Button variant={projects ? "primary" : "link"}  onClick={() => linkClicked("projects")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
@@ -133,7 +134,7 @@ const Home = (props) => {
               />
             </Button>
           </div>
-          <div id="aboutSection">
+          <div id="section">
           {aboutTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><AboutPage/></animated.div>)}
           {resumeTransition.map(({ item, key, props }) =>

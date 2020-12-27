@@ -114,7 +114,7 @@ export const GlobalStyles = createGlobalStyle`
 
 .diamond path {
 stroke: ${({ theme }) => theme.accent} !important;
-stroke-width: 19 !important;
+stroke-width: 21 !important;
 }
 
 .diamond2 {
