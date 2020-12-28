@@ -1,6 +1,6 @@
 export const lightTheme = {
   mode: 'light',
-  bg: '#e8e8e8',
+  bg: '#e0e0e0',
   text: '#525252',
   lightShadow: '#FFFFFF',
   darkShadow: '#949494',

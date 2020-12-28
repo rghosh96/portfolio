@@ -6,7 +6,7 @@ import {ReactComponent as Diamond } from '../css/diamond.svg'
 
 const Contact = (props) => {
     return (
-      <div className="about-container">
+      <div className="section-container">
         <div className="diamond-header">
           <Diamond className="diamond2"></Diamond>
           <Diamond className="diamond2"></Diamond>

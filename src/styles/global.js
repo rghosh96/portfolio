@@ -19,6 +19,17 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 
+  .section-container {
+    border: 1px solid ${({ theme }) => theme.accent};
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    margin-top: 21px;
+    padding: 15px;
+  }
+
   h1 {
     font-family: ${({ theme }) => theme.sansSerif};
   }
@@ -27,9 +38,37 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.cursive};
     color: ${({ theme }) => theme.accent};
     text-align: center;
+    margin-bottom: 0px !important;
+  }
+
+  h3 {
+    font-family: ${({ theme }) => theme.cursive};
+    color: ${({ theme }) => theme.accent};
+    font-size: 15px;
+    margin-bottom: 0px !important;
+  }
+
+  h4 {
+    font-family: ${({ theme }) => theme.sansSerif};
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0px !important;
+    margin-top: 7px;
+  }
+
+  h5 {
+    font-family: ${({ theme }) => theme.sansSerif};
+    font-size: 13px;
+    color: ${({ theme }) => theme.accent};
   }
   
   p {
+    font-family: ${({ theme }) => theme.sansSerif};
+    font-size: 13px;
+  }
+
+  li {
     font-family: ${({ theme }) => theme.sansSerif};
     font-size: 13px;
   }
@@ -41,6 +80,13 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 125px;
     letter-spacing: 3px;
     line-height: 2px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .title {
@@ -61,7 +107,6 @@ export const GlobalStyles = createGlobalStyle`
 
   hr {
     background-color: ${({ theme }) => theme.accent}!important;
-    height: 0.5px !important;
     width: 0%;
   }
   
@@ -81,6 +126,15 @@ export const GlobalStyles = createGlobalStyle`
       box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
     }
+  }
+
+  .profile-image {
+    height: 200px;
+    width: 150px;
+    border-radius: 30px;
+    margin-bottom: 35px;
+    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
   }
 
   .btn-primary {
