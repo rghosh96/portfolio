@@ -40,7 +40,6 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    background-color: ${({ theme }) => theme.bg};
   }
 
   h1 {
