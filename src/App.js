@@ -8,7 +8,6 @@ import { GlobalStyles } from './styles/global';
 import './css/master.css';
 import ToggleSwitch from './components/Toggle';
 
-
 function App(props) {
   const [theme, setTheme] = useState('light');
 

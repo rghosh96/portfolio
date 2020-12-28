@@ -4,6 +4,7 @@ import '../css/master.css';
 import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
 import profile from '../assets/profile.gif'
+import { animateScroll as scroll } from 'react-scroll'
 
 const About = (props) => {
     return (
@@ -44,6 +45,22 @@ const About = (props) => {
           setup depending on my mood, the season, etc. you'll hear me referring to things as "cute" too often,
           something peers have pointed out as "odd" for a computer scientist/developer. but i mean, when my VS code 
           and terminal themes are all synced up and cute, it makes work feel cozy and more enjoyable (:  </p>
+
+        <h3>extras:</h3>
+        <p>my fav fonts are quicksand & raleway. i prefer sans serif fonts -- rarely use serif. times new roman is cool for 
+          writing papers and stuff. i love typography & am trying to learn more about font pairings, etc!
+        </p>
+        <p>my text editor of choice is vs code bc i love to do web dev. i love all the extensions, the themes, the 
+          level of customizability (is that a word???), etc! sometimes i'll use netbeans if i'm doing giant c++ projects.
+          i'll use android studio of course for android apps, and eclipse if i'm developing in java.
+        </p>
+
+        <h3>mac or pc?</h3>
+        <p>mac. love the ease of use with the terminal. would go for linux, too. don't know if i could do windows lol
+        </p>
+
+        <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
+        <div className="diamond-top-text">top</div></div>
       </div>
     )
   }

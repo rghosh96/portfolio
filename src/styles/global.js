@@ -30,6 +30,17 @@ export const GlobalStyles = createGlobalStyle`
     padding: 15px;
   }
 
+  .to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
   h1 {
     font-family: ${({ theme }) => theme.sansSerif};
   }
@@ -44,7 +55,7 @@ export const GlobalStyles = createGlobalStyle`
   h3 {
     font-family: ${({ theme }) => theme.cursive};
     color: ${({ theme }) => theme.accent};
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 0px !important;
   }
 
@@ -150,6 +161,24 @@ export const GlobalStyles = createGlobalStyle`
     height: 65px;
     width: 65px;
   }
+
+.diamond-top {
+  transform: rotate(180deg);
+}
+
+.diamond-top path {
+  fill: ${({ theme }) => theme.accent} !important;
+  stroke: none !important;
+}
+
+.diamond-top-text {
+  color: ${({ theme }) => theme.bg} !important;
+  position: absolute;
+  text-align: center;
+  transform: translateY(15px);
+  font-family: ${({ theme }) => theme.sansSerif};
+  font-size: 11px;
+}
 
 .diamond {
   margin-bottom: 13px;

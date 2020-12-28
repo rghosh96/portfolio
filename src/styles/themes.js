@@ -7,7 +7,7 @@ export const lightTheme = {
   accent: '#e3a813',
 
   cursive: '"Cedarville Cursive", cursive',
-  sansSerif: '"Raleway", sans-serif',
+  sansSerif: '"Quicksand", sans-serif',
   code: '"Anonymous Pro", monospace',
 }
   
