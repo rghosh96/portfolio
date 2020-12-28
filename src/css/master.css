@@ -16,3 +16,13 @@
   border: 1px solid grey;
   border-radius: 45px;
 }
+
+.diamond-top:hover {
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  50% {
+    transform: rotate(180deg);
+  }
+}

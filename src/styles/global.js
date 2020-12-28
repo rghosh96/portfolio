@@ -34,11 +34,13 @@ export const GlobalStyles = createGlobalStyle`
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 10px;
+    margin: 5px;
+    padding-bottom: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    background-color: ${({ theme }) => theme.bg};
   }
 
   h1 {
@@ -163,7 +165,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 .diamond-top {
-  transform: rotate(180deg);
+  transform: rotateX(180deg);
 }
 
 .diamond-top path {
@@ -177,7 +179,7 @@ export const GlobalStyles = createGlobalStyle`
   text-align: center;
   transform: translateY(15px);
   font-family: ${({ theme }) => theme.sansSerif};
-  font-size: 11px;
+  font-size: 9px;
 }
 
 .diamond {

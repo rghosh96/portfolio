@@ -4,7 +4,7 @@ import '../css/master.css';
 import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
 import ResumePDF from '../assets/Resume_Dec2020.pdf';
-
+import { animateScroll as scroll } from 'react-scroll'
 
 const Resume = (props) => {
     return (
@@ -63,6 +63,8 @@ const Resume = (props) => {
         <p>Programming Foundations I & II</p>
         </div>
         
+        <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
+        <div className="diamond-top-text">top</div></div>
       </div>
     )
   }

@@ -5,7 +5,7 @@ import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubAlt} from '@fortawesome/free-brands-svg-icons';
-
+import { animateScroll as scroll } from 'react-scroll'
 
 const Projects = (props) => {
     return (
@@ -27,6 +27,8 @@ const Projects = (props) => {
             />
           </a>
         </div>
+        <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
+        <div className="diamond-top-text">top</div></div>
       </div>
     )
   }
