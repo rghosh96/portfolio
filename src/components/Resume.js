@@ -22,7 +22,7 @@ const Resume = (props) => {
         <div className="info"><h3>education: &nbsp; </h3> <p>university of arkansas, fayetteville, ar</p></div>
         <div className="info"><h3>major: &nbsp; </h3> <p>computer science, bachelor of science</p></div>
         <div className="info"><h3>minor: &nbsp; </h3> <p>mathematics</p></div>
-        <div className="info"><h3>gpa: &nbsp; </h3> <p>3.805 (4.0 scale)</p></div>
+        <div className="info"><h3>gpa: &nbsp; </h3> <p>3.804 (4.0 scale)</p></div>
         <div className="info"><h3>years: &nbsp; </h3> <p>may 2015 - dec 2020</p></div>
         <h3>programming languages:</h3>
         <ul>
@@ -31,6 +31,8 @@ const Resume = (props) => {
           <li>Java</li>
           <li>Python</li>
           <li>SQL</li>
+          <li>MIPS Assembly Language</li>
+          <li>VHDL</li>
         </ul>
 
         <h3>experience with..</h3>
@@ -38,6 +40,9 @@ const Resume = (props) => {
           <li>React/React Native</li>
           <li>Android Studio</li>
           <li>Google Firebase/Firestore</li>
+          <li>Python Flask</li>
+          <li>Latex</li>
+          <li>Eclipse</li>
           <li>Heroku</li>
           <li>R</li>
         </ul>
@@ -50,17 +55,37 @@ const Resume = (props) => {
           <li>Responsive Web Design</li>
         </ul>
 
-        <hr />
+        <h3>software engineering/development practices...</h3>
+        <ul>
+          <li>Agile SCRUM</li>
+          <li>Jira</li>
+          <li>Git/Github</li>
+        </ul>
+
+        
 
         <div className="center">
         <h3>work experience:</h3>
+        <hr />
         <h4>software engineer intern</h4>
         <h5>cerner corporation, kcmo</h5>
         <p>Population Health Division | Care Management</p>
+        <ul>
+        <li>Develop a holistic, preventative healthcare solution for 
+          healthcare managers who keep track of patient wellness and post-care routines</li>
+        <li>Heavy utilization of React/JavaScript & in-house Cerner Command Language (SQL-based scripting language)</li>
+        </ul>
 
+        <hr />
         <h4>teaching assistant</h4>
         <h5>university of arkansas, fayetteville, ar</h5>
         <p>Programming Foundations I & II</p>
+        <ul>
+        <li>Teach a supplementary programming lab in C++ and grade labs, quizzes, and homework assignments</li>
+        <li>Topics include: object oriented programming, data structures, arrays, pointers, linked lists, binary trees, stacks/queues, 
+          recursion, and sorting algorithm time complexities</li>
+        <li>Serve as a resource and tutor for students in gaining a deeper understanding of C++</li>
+        </ul>
         </div>
         
         <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
