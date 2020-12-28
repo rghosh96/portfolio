@@ -22,6 +22,7 @@ const ToggleContainer = styled.button`
   overflow: hidden;
   width: 80px;
   height: 40px;
+  z-index: 1000;
     
     // sun icon
     .light {
