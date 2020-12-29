@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import logo from './logo.svg';
-import './App.css';
-import Home from './components/Home'
-import About from './components/About'
-import Healthcare from './components/Healthcare'
+import HomePage from './components/Home'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './styles/themes';
+import { GlobalStyles } from './styles/global';
+import './css/master.css';
+import ToggleSwitch from './components/Toggle';
+
+function App(props) {
+  const [theme, setTheme] = useState('light');
+
+// The function that toggles between themes
+const toggleTheme = () => {
+  // if the theme is not light, then set it to dark
+  if (theme === 'light') {
+    setTheme('dark');
+  // otherwise, it should be light
+  } else {
+    setTheme('light');
+  }
+}
 
 
-function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <div className="container">
+      <ToggleSwitch theme={theme === 'light' ? lightTheme : darkTheme} toggleTheme={toggleTheme}>Toggle theme</ToggleSwitch>
+      <GlobalStyles />
       <BrowserRouter>
       <Switch>
-        <Route exact path="/portfolio/" component={Home} />
-        <Route exact path="/portfolio/about" component={About} />
-        <Route exact path="/portfolio/healthcare" component={Healthcare} />
+        <Route exact path="/portfolio" component={HomePage} />
       </Switch>
       </BrowserRouter>
-    </div>
+      </div>
+    </ThemeProvider>
+    
   );
 }
 
