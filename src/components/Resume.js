@@ -47,6 +47,27 @@ const Resume = (props) => {
           <li>R</li>
         </ul>
 
+        <h3>relevant courses:</h3>
+        <ul>
+          <li>programming foundations I & II (C++)</li>
+          <li>programming paradigms (java, javascript, python)</li>
+          <li>database management systems</li>
+          <li>artifical intelligence</li>
+          <li>digital design</li>
+          <li>operating systems</li>
+          <li>computer organization</li>
+          <li>computer architecture</li>
+          <li>formal languages/automata theory</li>
+          <li>algorithms</li>
+          <li>discrete mathematics</li>
+          <li>combinatorics</li>
+          <li>linear algebra</li>
+          <li>models of computation</li>
+          <li>software engineering</li>
+          <li>capstone I & II (senior project)</li>
+          <li>mobile programming</li>
+        </ul>
+
         <h3>web development...</h3>
         <ul>
           <li>HTML</li>
@@ -65,7 +86,8 @@ const Resume = (props) => {
         
 
         <div className="center">
-        <h3>work experience:</h3>
+          <hr />
+        <h3>work experience</h3>
         <hr />
         <h4>software engineer intern</h4>
         <h5>cerner corporation, kcmo</h5>
@@ -76,7 +98,7 @@ const Resume = (props) => {
         <li>Heavy utilization of React/JavaScript & in-house Cerner Command Language (SQL-based scripting language)</li>
         </ul>
 
-        <hr />
+
         <h4>teaching assistant</h4>
         <h5>university of arkansas, fayetteville, ar</h5>
         <p>Programming Foundations I & II</p>
@@ -86,6 +108,34 @@ const Resume = (props) => {
           recursion, and sorting algorithm time complexities</li>
         <li>Serve as a resource and tutor for students in gaining a deeper understanding of C++</li>
         </ul>
+
+        <hr />
+        <h3>leadership</h3>
+        <hr />
+        <h4>resident assistant</h4>
+        <h5>university of arkansas, fayetteville, ar</h5>
+        <p>holcombe hall | northwest quad</p>
+        <ul>
+        <li>Communicate and collaborate with the housing department, dormitory staff, and residents to build a 
+          functioning, efficient working group and a warm, positive atmosphere in the building</li>
+        <li>Plan programs for audiences ranging between 30 to over 500 people; formulate itemized budgets 
+          (ranging from $300 to $2000)</li>
+        <li>As head RA, manage other resident assistants, organize meetings, plan their duties, and mediate internal conflicts</li>
+        </ul>
+
+        <hr />
+        <h3>volunteer</h3>
+        <hr />
+        <h4>northwest arkansas givecamp</h4>
+        <h5>fayetteville, ar</h5>
+        <ul>
+        <li>Non profit for non profits around Northwest AR, grouping software engineers and project managers to help 
+          redesign and develop websites for local non profits </li>
+        <li>Worked closely with a small team for the Essentials Outreach nonprofit (who provides free hygiene products low 
+          income people) to redesign their website for improved user experience</li>
+        </ul>
+
+
         </div>
         
         <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>

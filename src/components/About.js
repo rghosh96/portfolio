@@ -5,8 +5,6 @@ import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
 import profile from '../assets/profile.gif'
 import { animateScroll as scroll } from 'react-scroll'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const About = (props) => {
     return (
@@ -38,7 +36,10 @@ const About = (props) => {
         <p>quicksand & raleway. i prefer sans serif fonts -- rarely use serif. times new roman is cool for 
           writing papers and stuff. i love typography & am trying to learn more about font pairings, etc!
         </p>
-
+        <h3>video games:</h3>
+        <p>i don't rlly play much, but i have a switch and enjoy animal crossing, mario kart, and pokemon! also a
+          huge fan of mortal kombat >:)
+        </p>
         <h3>favorite coding softwares:</h3>
         <p>my text editor of choice is vs code bc i love to do web dev. i love all the extensions, the themes, the 
           level of customizability (is that a word???), etc! sometimes i'll use netbeans if i'm doing giant c++ projects.
