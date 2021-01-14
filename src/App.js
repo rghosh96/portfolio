@@ -9,16 +9,22 @@ import './css/master.css';
 import ToggleSwitch from './components/Toggle';
 
 function App(props) {
-  const [theme, setTheme] = useState('light');
+  // check if persisting theme exists, set to last theme; else light is default
+  let siteTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
+  const [theme, setTheme] = useState(siteTheme);
 
 // The function that toggles between themes
 const toggleTheme = () => {
   // if the theme is not light, then set it to dark
   if (theme === 'light') {
     setTheme('dark');
+    // save this choice to local storage
+    localStorage.setItem('theme', 'dark');
   // otherwise, it should be light
   } else {
     setTheme('light');
+    // save this choice to local storage
+    localStorage.setItem('theme', 'light');
   }
 }
 
