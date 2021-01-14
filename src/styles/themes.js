@@ -6,7 +6,7 @@ export const lightTheme = {
   darkShadow: '#949494',
   accent: '#e3a813',
 
-  cursive: '"Cedarville Cursive", cursive',
+  cursive: '"La Belle Aurore", cursive',
   sansSerif: '"Quicksand", sans-serif',
   code: '"Anonymous Pro", monospace',
 }
@@ -19,7 +19,7 @@ export const lightTheme = {
     darkShadow: '#000000',
     accent: '#ffc4d7',
 
-    cursive: '"Cedarville Cursive", cursive',
+    cursive: '"La Belle Aurore", cursive',
     sansSerif: '"Raleway", sans-serif',
     code: '"Anonymous Pro", monospace',
   }
