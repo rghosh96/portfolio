@@ -31,6 +31,12 @@
   transform: translateY(-7px);
 }
 
+.btn-link:hover .button-label {
+  opacity: 1;
+  margin-bottom: 15px !important;
+  text-decoration: none !important;
+}
+
 hr {
   -webkit-animation: lineDraw 2s;
   -moz-animation: lineDraw 2s;

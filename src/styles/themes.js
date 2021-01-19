@@ -9,6 +9,7 @@ export const lightTheme = {
   cursive: '"La Belle Aurore", cursive',
   sansSerif: '"Quicksand", sans-serif',
   code: '"Anonymous Pro", monospace',
+  bold: '"Spartan", sans-serif'
 }
   
   export const darkTheme = {
@@ -20,6 +21,7 @@ export const lightTheme = {
     accent: '#ffc4d7',
 
     cursive: '"La Belle Aurore", cursive',
-    sansSerif: '"Raleway", sans-serif',
+    sansSerif: '"Quicksand", sans-serif',
     code: '"Anonymous Pro", monospace',
+    bold: '"Spartan", sans-serif'
   }

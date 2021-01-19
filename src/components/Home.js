@@ -100,7 +100,7 @@ const Home = (props) => {
             <span className="title">h</span>
             </div>
           </div>
-          <p className="subtitle">computer scientist | software engineer | developer</p>
+          <p className="subtitle">computer scientist | prospective phD candidate | software engineer | developer</p>
           <hr />
           <div className="nav">
             <Link to="section" smooth={true} duration={1000}>
@@ -110,6 +110,7 @@ const Home = (props) => {
                 icon={faUserCircle} 
                 size='2x'
               />
+              <p class="button-label">about</p>
             </Button></Link>
             <Link to="section" smooth={true} duration={1000}>
             <Button variant={resume ? "primary" : "link"}  onClick={() => linkClicked("resume")}>
@@ -118,6 +119,7 @@ const Home = (props) => {
                 icon={faFileAlt} 
                 size='2x'
               />
+              <p class="button-label">resume</p>
             </Button></Link>
             <Button variant={projects ? "primary" : "link"}  onClick={() => linkClicked("projects")}>
             <FontAwesomeIcon
@@ -125,6 +127,7 @@ const Home = (props) => {
                 icon={faCode} 
                 size='2x'
               />
+              <p class="button-label">projects</p>
             </Button>
             <Button variant={contact ? "primary" : "link"}  onClick={() => linkClicked("contact")}>
             <FontAwesomeIcon
@@ -132,6 +135,7 @@ const Home = (props) => {
                 icon={faEnvelope} 
                 size='2x'
               />
+              <p class="button-label">contact</p>
             </Button>
           </div>
           <div id="section">

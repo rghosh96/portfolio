@@ -123,6 +123,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   .btn-link {
+    width: 75px !important;
+    height: 75px !important;
     padding: 15px !important;
     margin: 20px !important;
     border: none !important;
@@ -138,6 +140,17 @@ export const GlobalStyles = createGlobalStyle`
       box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
     }
+  }
+
+  .button-label {
+    font-family: ${({ theme }) => theme.bold};
+    color: ${({ theme }) => theme.accent};
+    font-size: 9px;
+    opacity: 0;
+    transition: .3s ease-in;
+    text-align: center;
+    max-height: 0px !important;
+    margin: 0 !important;
   }
 
   .profile-image {
