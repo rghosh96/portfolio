@@ -4,7 +4,7 @@ export const lightTheme = {
   text: '#525252',
   lightShadow: '#FFFFFF',
   darkShadow: '#949494',
-  accent: '#e3a813',
+  accent: '#e0a100',
 
   cursive: '"La Belle Aurore", cursive',
   sansSerif: '"Quicksand", sans-serif',

@@ -33,18 +33,14 @@ const About = (props) => {
         <p>depends! coffee or a cup of chai in the mornings/daytime, herbal teas at night before bed (:
         </p>
         <h3>favorite fonts:</h3>
-        <p>quicksand & raleway. i prefer sans serif fonts -- rarely use serif. times new roman is cool for 
-          writing papers and stuff. i love typography & am trying to learn more about font pairings, etc!
+        <p>been rlly into montesserat, quicksand, & spartan lately
         </p>
         <h3>video games:</h3>
         <p>i don't rlly play much, but i have a switch and enjoy animal crossing, mario kart, and pokemon! also a
           huge fan of mortal kombat >:)
         </p>
         <h3>favorite coding softwares:</h3>
-        <p>my text editor of choice is vs code bc i love to do web dev. i love all the extensions, the themes, the 
-          level of customizability (is that a word???), etc! sometimes i'll use netbeans if i'm doing giant c++ projects.
-          i'll use android studio of course for android apps, and eclipse if i'm developing in java. i also use iTerm + zshell
-          instead of the standard terminal on my mac
+        <p>good old terminal + decked out text editor
         </p>
 
         <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>

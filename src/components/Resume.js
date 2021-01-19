@@ -1,10 +1,12 @@
 import React from 'react'
 import '../css/about.css';
 import '../css/master.css';
+import '../css/resume.css';
 import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
 import ResumePDF from '../assets/Resume_Dec2020.pdf';
 import { animateScroll as scroll } from 'react-scroll'
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Resume = (props) => {
     return (
@@ -19,75 +21,127 @@ const Resume = (props) => {
         <h4>view my "official" resume <span> <a href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{color: props.theme.accent}}>here</a></span></h4>
         </div>
         <hr />
-        <div className="info"><h3>education: &nbsp; </h3> <p>university of arkansas, fayetteville, ar</p></div>
+        <div className="info"><h3>undergrad: &nbsp; </h3> <p>university of arkansas, fayetteville, ar</p></div>
         <div className="info"><h3>major: &nbsp; </h3> <p>computer science, bachelor of science</p></div>
         <div className="info"><h3>minor: &nbsp; </h3> <p>mathematics</p></div>
         <div className="info"><h3>gpa: &nbsp; </h3> <p>3.804 (4.0 scale)</p></div>
         <div className="info"><h3>years: &nbsp; </h3> <p>may 2015 - dec 2020</p></div>
-        <h3>programming languages:</h3>
-        <ul>
-          <li>C++</li>
-          <li>JavaScript</li>
-          <li>Java</li>
-          <li>Python</li>
-          <li>SQL</li>
-          <li>MIPS Assembly Language</li>
-          <li>VHDL</li>
-        </ul>
+        <hr/>
+        <h6>programming background</h6>
+        <hr />
+        <Container>
+        <Row>
+        <Col xs={6}>
+          <h3>programming languages:</h3>
+            <ul>
+              <li>C++</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>MIPS Assembly Language</li>
+              <li>VHDL</li>
+            </ul>
+          </Col>
 
-        <h3>experience with..</h3>
-        <ul>
-          <li>React/React Native</li>
-          <li>Android Studio</li>
-          <li>Google Firebase/Firestore</li>
-          <li>Python Flask</li>
-          <li>Latex</li>
-          <li>Eclipse</li>
-          <li>Heroku</li>
-          <li>R</li>
-        </ul>
+          <Col xs={6}>
+          <h3>experience with..</h3>
+          <ul>
+            <li>React/React Native</li>
+            <li>Android Studio</li>
+            <li>Google Firebase, Firestore</li>
+            <li>Python Flask</li>
+            <li>Latex</li>
+            <li>Eclipse</li>
+            <li>Heroku</li>
+            <li>R</li>
+          </ul>
+          </Col>
+        </Row>
 
-        <h3>relevant courses:</h3>
-        <ul>
-          <li>programming foundations I & II (C++)</li>
-          <li>programming paradigms (java, javascript, python)</li>
-          <li>database management systems</li>
-          <li>artifical intelligence</li>
-          <li>digital design</li>
-          <li>operating systems</li>
-          <li>computer organization</li>
-          <li>computer architecture</li>
-          <li>formal languages/automata theory</li>
-          <li>algorithms</li>
-          <li>discrete mathematics</li>
-          <li>combinatorics</li>
-          <li>linear algebra</li>
-          <li>models of computation</li>
-          <li>software engineering</li>
-          <li>capstone I & II (senior project)</li>
-          <li>mobile programming</li>
-        </ul>
-
-        <h3>web development...</h3>
+        <Row>
+        <Col xs={6}>
+        <h3>web development:</h3>
         <ul>
           <li>HTML</li>
           <li>CSS/SCSS</li>
           <li>Bootstrap</li>
           <li>Responsive Web Design</li>
         </ul>
+        </Col>
 
-        <h3>software engineering/development practices...</h3>
+        <Col xs={6}>
+        <h3>software engineering:</h3>
         <ul>
           <li>Agile SCRUM</li>
           <li>Jira</li>
           <li>Git/Github</li>
         </ul>
+        </Col>
+        </Row>
+        </Container>
 
+        <hr/>
+        <h6>relevant courses</h6>
+        <hr />
+
+        <Container>
+          <Row>
+            <Col xs={6} md={4}>
+            <h3>programming:</h3>
+              <ul>
+                <li>programming foundations I & II</li>
+                <li>programming paradigms</li>
+                <li>database management systems</li>
+                <li>mobile programming</li>
+                <li>artifical intelligence</li>
+              </ul>
+            </Col>
+
+            <Col xs={6} md={4}>
+            <h3>computer theory:</h3>
+              <ul>
+                <li>formal languages, automata theory</li>
+                <li>algorithms</li>
+                <li>(natural) models of computation</li>
+              </ul>
+            </Col>
+
+            <Col xs={6} md={4}>
+            <h3>math:</h3>
+              <ul>
+                <li>discrete mathematics</li>
+                <li>combinatorics</li>
+                <li>linear algebra</li>
+              </ul>
+            </Col>
+          </Row>
+        
+          <Row>
+            <Col>
+            <h3>software engineering:</h3>
+              <ul>
+                <li>software engineering</li>
+                <li>capstone I & II (senior project)</li>
+              </ul>
+            </Col>
+
+            <Col>
+            <h3>computer engineering:</h3>
+              <ul>
+                <li>digital design</li>
+                <li>operating systems</li>
+                <li>computer organization</li>
+                <li>computer architecture</li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
         
 
         <div className="center">
           <hr />
-        <h3>work experience</h3>
+        <h6>work experience</h6>
         <hr />
         <h4>software engineer intern</h4>
         <h5>cerner corporation, kcmo</h5>
@@ -110,7 +164,7 @@ const Resume = (props) => {
         </ul>
 
         <hr />
-        <h3>leadership</h3>
+        <h6>leadership</h6>
         <hr />
         <h4>resident assistant</h4>
         <h5>university of arkansas, fayetteville, ar</h5>
@@ -124,7 +178,7 @@ const Resume = (props) => {
         </ul>
 
         <hr />
-        <h3>volunteer</h3>
+        <h6>volunteer</h6>
         <hr />
         <h4>northwest arkansas givecamp</h4>
         <h5>fayetteville, ar</h5>

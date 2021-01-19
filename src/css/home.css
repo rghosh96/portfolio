@@ -34,7 +34,6 @@
 .btn-link:hover .button-label {
   opacity: 1;
   margin-bottom: 15px !important;
-  text-decoration: none !important;
 }
 
 hr {

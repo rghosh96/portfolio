@@ -54,9 +54,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-family: ${({ theme }) => theme.cursive};
+    font-family: ${({ theme }) => theme.bold};
     color: ${({ theme }) => theme.accent};
-    font-size: 17px;
+    font-size: 11px;
     margin-bottom: 0px !important;
   }
 
@@ -73,6 +73,14 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.sansSerif};
     font-size: 13px;
     color: ${({ theme }) => theme.accent};
+  }
+
+  h6 {
+    font-family: ${({ theme }) => theme.cursive};
+    font-size: 17px;
+    text-align: center;
+    color: ${({ theme }) => theme.accent};
+    margin: 0;
   }
   
   p {
@@ -125,6 +133,7 @@ export const GlobalStyles = createGlobalStyle`
   .btn-link {
     width: 75px !important;
     height: 75px !important;
+    text-decoration: none !important;
     padding: 15px !important;
     margin: 20px !important;
     border: none !important;
