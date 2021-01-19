@@ -244,14 +244,14 @@ stroke-width: 21 !important;
   }
 
   @media only screen and (max-width: 375px) {
-    .btn-link {
+    .btn-link, .btn-primary {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .button-label {
-      opacity: 1 !important;
+      opacity: 1 ;
     }
   }
 

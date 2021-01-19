@@ -87,7 +87,7 @@ const Resume = (props) => {
 
         <Container>
           <Row>
-            <Col xs={6} md={4}>
+            <Col >
             <h3>programming:</h3>
               <ul>
                 <li>programming foundations I & II</li>
@@ -98,21 +98,12 @@ const Resume = (props) => {
               </ul>
             </Col>
 
-            <Col xs={6} md={4}>
+            <Col >
             <h3>computer theory:</h3>
               <ul>
                 <li>formal languages, automata theory</li>
                 <li>algorithms</li>
                 <li>(natural) models of computation</li>
-              </ul>
-            </Col>
-
-            <Col xs={6} md={4}>
-            <h3>math:</h3>
-              <ul>
-                <li>discrete mathematics</li>
-                <li>combinatorics</li>
-                <li>linear algebra</li>
               </ul>
             </Col>
           </Row>
@@ -133,6 +124,21 @@ const Resume = (props) => {
                 <li>operating systems</li>
                 <li>computer organization</li>
                 <li>computer architecture</li>
+              </ul>
+            </Col>
+          </Row>
+
+          <Row>
+          <Col>
+            <h3>mathematics:</h3>
+              <ul>
+              <li>calculus I & II</li>
+              <li>differential equations</li>
+              <li>bio statistics</li>
+              <li>applied probability & statstics for engineers</li>
+                <li>linear algebra</li>
+                <li>discrete mathematics</li>
+                <li>combinatorics</li>
               </ul>
             </Col>
           </Row>
