@@ -99,11 +99,3 @@ hr {
     transform: rotateY(90deg);
   }
 }
-
-@media only screen and (max-width: 320px) {
-  .title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}

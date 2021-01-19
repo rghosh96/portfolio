@@ -243,4 +243,16 @@ stroke-width: 21 !important;
   stroke-width: 23 !important;
   }
 
+  @media only screen and (max-width: 375px) {
+    .btn-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button-label {
+      opacity: 1 !important;
+    }
+  }
+
 `
