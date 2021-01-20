@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.efd228d5.chunk.css",
-    "main.js": "/portfolio/static/js/main.32e3838d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.32e3838d.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.4b2c4178.chunk.css",
+    "main.js": "/portfolio/static/js/main.7e41d872.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.7e41d872.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.24abe101.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.24abe101.js.map",
     "static/css/2.b0704b7a.chunk.css": "/portfolio/static/css/2.b0704b7a.chunk.css",
-    "static/js/2.82bee196.chunk.js": "/portfolio/static/js/2.82bee196.chunk.js",
-    "static/js/2.82bee196.chunk.js.map": "/portfolio/static/js/2.82bee196.chunk.js.map",
+    "static/js/2.e0d32fa8.chunk.js": "/portfolio/static/js/2.e0d32fa8.chunk.js",
+    "static/js/2.e0d32fa8.chunk.js.map": "/portfolio/static/js/2.e0d32fa8.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.e6ea948f080a537af671a176dbfc95cb.js": "/portfolio/precache-manifest.e6ea948f080a537af671a176dbfc95cb.js",
+    "precache-manifest.219f8475fc7e2114b4ff2d701978c43d.js": "/portfolio/precache-manifest.219f8475fc7e2114b4ff2d701978c43d.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.b0704b7a.chunk.css.map": "/portfolio/static/css/2.b0704b7a.chunk.css.map",
-    "static/css/main.efd228d5.chunk.css.map": "/portfolio/static/css/main.efd228d5.chunk.css.map",
-    "static/js/2.82bee196.chunk.js.LICENSE.txt": "/portfolio/static/js/2.82bee196.chunk.js.LICENSE.txt",
+    "static/css/main.4b2c4178.chunk.css.map": "/portfolio/static/css/main.4b2c4178.chunk.css.map",
+    "static/js/2.e0d32fa8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e0d32fa8.chunk.js.LICENSE.txt",
     "static/media/Resume_Dec2020.pdf": "/portfolio/static/media/Resume_Dec2020.aac536a1.pdf",
     "static/media/diamond.44dea1bf.svg": "/portfolio/static/media/diamond.44dea1bf.svg",
     "static/media/profile.gif": "/portfolio/static/media/profile.20569d36.gif"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.24abe101.js",
     "static/css/2.b0704b7a.chunk.css",
-    "static/js/2.82bee196.chunk.js",
-    "static/css/main.efd228d5.chunk.css",
-    "static/js/main.32e3838d.chunk.js"
+    "static/js/2.e0d32fa8.chunk.js",
+    "static/css/main.4b2c4178.chunk.css",
+    "static/js/main.7e41d872.chunk.js"
   ]
 }
