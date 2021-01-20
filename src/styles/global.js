@@ -185,6 +185,7 @@ export const GlobalStyles = createGlobalStyle`
 
   form input,
   form textarea {
+    -webkit-appearance: none;
     font-family: ${({ theme }) => theme.sansSerif};
     color: ${({ theme }) => theme.text};
     font-size: 11px;
