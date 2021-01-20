@@ -112,19 +112,19 @@ const Contact = (props) => {
 
         <div class="social-media-area">
 
-        <a href="https://www.facebook.com/rashi.x.gh">
+        <a href="https://www.linkedin.com/in/rashi-ghosh-a39ab6171/">
         <FontAwesomeIcon
                 color={props.theme.accent}
-                icon={faFacebookSquare} 
+                icon={faLinkedin} 
                 size='lg'
                 className="social-media"
               />
         </a>
 
-        <a href="https://www.linkedin.com/in/rashi-ghosh-a39ab6171/">
+        <a href="https://www.facebook.com/rashi.x.gh">
         <FontAwesomeIcon
                 color={props.theme.accent}
-                icon={faLinkedin} 
+                icon={faFacebookSquare} 
                 size='lg'
                 className="social-media"
               />
