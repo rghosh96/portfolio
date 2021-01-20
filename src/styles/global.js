@@ -140,7 +140,6 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 25px !important;
     transition: 0.3s ease-in-out !important;
     background: ${({ theme }) => theme.bg} !important;
-    border-radius: 50px;
     box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
     height: 65px;
@@ -178,11 +177,93 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 25px !important;
     transition: 0.3s ease-in-out !important;
     background: ${({ theme }) => theme.bg} !important;
-    border-radius: 50px;
     box-shadow: 10px 10px 16px 0 ${({ theme }) => theme.darkShadow} inset,
-    -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} inset !important;
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} inset !important;
     height: 65px;
     width: 65px;
+  }
+
+  form input,
+  form textarea {
+    font-family: ${({ theme }) => theme.sansSerif};
+    color: ${({ theme }) => theme.text};
+    font-size: 11px;
+    padding: 7px;
+    margin-top: 10px;
+    width: 50%;
+    border: none !important;
+    background: ${({ theme }) => theme.bg} !important;
+    box-shadow: 5px 5px 8px 0 ${({ theme }) => theme.darkShadow} inset,
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} inset !important;
+  }
+
+  form label {
+    font-size: 11px;
+    font-family: ${({ theme }) => theme.bold};
+    color: ${({ theme }) => theme.accent};
+    margin: 0 !important;
+  }
+
+  form input {
+    border-radius: 10px;
+  }
+
+  form textarea {
+    border-radius: 15px;
+  }
+
+  form .btn-primary {
+    padding: 15px !important;
+    height: auto;
+    width: auto;
+    font-size: 11px;
+    border-radius: 15px !important;
+    font-family: ${({ theme }) => theme.bold};
+    color: ${({ theme }) => theme.bg};
+    background-color: ${({ theme }) => theme.accent} !important;
+    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} !important;
+  }
+
+  form .btn-primary:hover {
+    transform: scale(1.1);
+  }
+
+  .error {
+    font-family: ${({ theme }) => theme.sansSerif};
+    color: ${({ theme }) => theme.text};
+    font-size: 11px;
+  }
+
+  .modalContainer, .modal-content {
+    background-color: ${({ theme }) => theme.bg} !important;
+    border-radius: 30px;
+    border: none;
+  }
+
+  .modalContainer .modal-title {
+    color: ${({ theme }) => theme.accent} !important;
+    font-family: ${({ theme }) => theme.cursive};
+    font-size: 21px;
+  }
+
+  .modalContainer .modal-header {
+    border-color: ${({ theme }) => theme.accent} !important;
+  }
+
+  .social-media {
+    transition: .3s ease-in-out;
+    margin: 5px;
+  }
+
+  .social-media:hover {
+    transform: scale(1.1);
+  }
+
+  .social-media-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
 .diamond-top {

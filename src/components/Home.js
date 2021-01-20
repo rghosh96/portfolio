@@ -112,6 +112,7 @@ const Home = (props) => {
               />
               <p class="button-label">about</p>
             </Button></Link>
+
             <Link to="section" smooth={true} duration={1000}>
             <Button variant={resume ? "primary" : "link"}  onClick={() => linkClicked("resume")}>
             <FontAwesomeIcon
@@ -121,6 +122,7 @@ const Home = (props) => {
               />
               <p class="button-label">resume</p>
             </Button></Link>
+
             <Button variant={projects ? "primary" : "link"}  onClick={() => linkClicked("projects")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
@@ -129,6 +131,8 @@ const Home = (props) => {
               />
               <p class="button-label">projects</p>
             </Button>
+
+            <Link to="section" smooth={true} duration={1000}>
             <Button variant={contact ? "primary" : "link"}  onClick={() => linkClicked("contact")}>
             <FontAwesomeIcon
                 color={props.theme.accent}
@@ -136,7 +140,7 @@ const Home = (props) => {
                 size='2x'
               />
               <p class="button-label">contact</p>
-            </Button>
+            </Button></Link>
           </div>
           <div id="section">
           {aboutTransition.map(({ item, key, props }) =>
