@@ -3,12 +3,13 @@ import '../css/home.css';
 import '../css/master.css';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle, faFileAlt, faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faFileAlt, faCode, faEnvelope, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { withTheme } from 'styled-components'
 import { ReactComponent as Diamond } from '../css/diamond.svg'
 import AboutPage from './About';
 import ResumePage from './Resume';
 import ProjectsPage from './Projects';
+import ResearchPage from './Research';
 import ContactPage from './Contact';
 import { useTransition, animated } from 'react-spring'
 import { Link } from 'react-scroll'
@@ -17,6 +18,7 @@ const Home = (props) => {
   const [about, setAbout] = useState(false);
   const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
+  const [research, setResearch] = useState(false);
   const [contact, setContact] = useState(false);
 
   const aboutTransition = useTransition(about, null, {
@@ -37,6 +39,12 @@ const Home = (props) => {
     leave: { opacity: 0 },
   })
 
+  const researchTransition = useTransition(research, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
+    leave: { opacity: 0 },
+  })
+
   const contactTransition = useTransition(contact, null, {
     from: { opacity: 0 },
     enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
@@ -49,24 +57,35 @@ const Home = (props) => {
         setAbout(!about);
         setResume(false);
         setProjects(false);
+        setResearch(false);
         setContact(false);
         break;
       case "resume":
         setResume(!resume)
         setAbout(false);
         setProjects(false);
+        setResearch(false);
         setContact(false);
         break;
       case "projects":
         setProjects(!projects);
         setResume(false);
         setAbout(false);
+        setResearch(false);
         setContact(false);
+        break;
+      case "research":
+        setContact(false)
+        setResume(false);
+        setProjects(false);
+        setResearch(!research);
+        setAbout(false);
         break;
       case "contact":
         setContact(!contact)
         setResume(false);
         setProjects(false);
+        setResearch(false);
         setAbout(false);
         break;
       default:
@@ -123,14 +142,25 @@ const Home = (props) => {
               <p class="button-label">resume</p>
             </Button></Link>
 
-          <Button variant={projects ? "primary" : "link"} onClick={() => linkClicked("projects")}>
-            <FontAwesomeIcon
-              color={props.theme.accent}
-              icon={faCode}
-              size='2x'
-            />
-            <p class="button-label">projects</p>
-          </Button>
+          <Link to="section" smooth={true} duration={1000}>
+            <Button variant={projects ? "primary" : "link"} onClick={() => linkClicked("projects")}>
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faCode}
+                size='2x'
+              />
+              <p class="button-label">projects</p>
+            </Button></Link>
+
+          <Link to="section" smooth={true} duration={1000}>
+            <Button variant={research ? "primary" : "link"} onClick={() => linkClicked("research")}>
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faBookOpen}
+                size='2x'
+              />
+              <p class="button-label">research</p>
+            </Button></Link>
 
           <Link to="section" smooth={true} duration={1000}>
             <Button variant={contact ? "primary" : "link"} onClick={() => linkClicked("contact")}>
@@ -142,6 +172,8 @@ const Home = (props) => {
               <p class="button-label">contact</p>
             </Button></Link>
         </div>
+
+
         <div id="section">
           {aboutTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><AboutPage /></animated.div>)}
@@ -149,6 +181,8 @@ const Home = (props) => {
             item && <animated.div key={key} style={props}><ResumePage /></animated.div>)}
           {projectsTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><ProjectsPage /></animated.div>)}
+          {researchTransition.map(({ item, key, props }) =>
+            item && <animated.div key={key} style={props}><ResearchPage /></animated.div>)}
           {contactTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><ContactPage /></animated.div>)}
         </div></div>
