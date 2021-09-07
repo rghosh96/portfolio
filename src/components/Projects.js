@@ -18,7 +18,7 @@ const Projects = (props) => {
         <h2>projects</h2>
         <hr />
         <div className="center">
-          <p>check out my github!</p>
+          <p>check out my github for random projects i've done</p>
           <a href="https://github.com/rghosh96" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               color={props.theme.accent}
@@ -26,6 +26,11 @@ const Projects = (props) => {
               size='2x'
             />
           </a>
+
+          <br></br>
+
+          <p>also, check out my 
+            <a href="https://marketplace.visualstudio.com/publishers/Shira" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>vs code themes</a> (:</p>
         </div>
         <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
         <div className="diamond-top-text">top</div></div>

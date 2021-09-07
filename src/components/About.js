@@ -30,7 +30,7 @@ const About = (props) => {
       <p>been rlly into montesserat, quicksand, & spartan lately
       </p>
       <h3>favorite coding softwares:</h3>
-      <p>good old terminal + decked out text editor
+      <p>good old terminal + decked out text editor (vs code)
       </p>
       <h3>how did u make this portfolio site?</h3>
       <p>made from scratch using react!

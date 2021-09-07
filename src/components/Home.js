@@ -132,6 +132,16 @@ const Home = (props) => {
               <p class="button-label">about</p>
             </Button></Link>
 
+            <Link to="section" smooth={true} duration={1000}>
+            <Button variant={research ? "primary" : "link"} onClick={() => linkClicked("research")}>
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faBookOpen}
+                size='2x'
+              />
+              <p class="button-label">research</p>
+            </Button></Link>
+
           <Link to="section" smooth={true} duration={1000}>
             <Button variant={resume ? "primary" : "link"} onClick={() => linkClicked("resume")}>
               <FontAwesomeIcon
@@ -150,16 +160,6 @@ const Home = (props) => {
                 size='2x'
               />
               <p class="button-label">projects</p>
-            </Button></Link>
-
-          <Link to="section" smooth={true} duration={1000}>
-            <Button variant={research ? "primary" : "link"} onClick={() => linkClicked("research")}>
-              <FontAwesomeIcon
-                color={props.theme.accent}
-                icon={faBookOpen}
-                size='2x'
-              />
-              <p class="button-label">research</p>
             </Button></Link>
 
           <Link to="section" smooth={true} duration={1000}>
