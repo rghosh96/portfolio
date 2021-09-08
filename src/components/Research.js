@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/about.css';
 import '../css/master.css';
+import { animateScroll as scroll } from 'react-scroll'
 import { withTheme } from 'styled-components'
 import { ReactComponent as Diamond } from '../css/diamond.svg'
 
@@ -37,6 +38,9 @@ const Research = (props) => {
             <h6>publications</h6>
             <hr />
             <p>stay tuned! someday... (,:</p>
+            <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top" />
+                <div className="diamond-top-text">top</div>
+            </div>
         </div>
     )
 }
