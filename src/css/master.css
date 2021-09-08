@@ -17,10 +17,6 @@
   border-radius: 45px;
 }
 
-.center {
-  text-align: center;
-}
-
 .links {
   text-decoration: none !important;
   transition: 0.2s ease-in;

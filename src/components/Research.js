@@ -15,7 +15,7 @@ const Research = (props) => {
             </div>
             <h2>research</h2>
             <hr />
-            <div className="center">
+            <div style={{ textAlign: 'center' }}>
                 <p>i am currently a 1st year 
                 <a class="links" href="https://en.wikipedia.org/wiki/Human-centered_computing" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> human-centered-computing</a> phD student at the 
                 university of florida in the

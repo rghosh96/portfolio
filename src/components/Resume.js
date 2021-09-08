@@ -148,6 +148,14 @@ const Resume = (props) => {
               <li>combinatorics</li>
             </ul>
           </Col>
+
+          <Col>
+            <h3>phD courses:</h3>
+            <ul>
+              <li>ux design</li>
+              <li>spoken dialogue systems</li>
+            </ul>
+          </Col>
         </Row>
       </Container>
 
@@ -201,19 +209,6 @@ const Resume = (props) => {
             (ranging from $300 to $2000)</li>
           <li>As head RA, manage other resident assistants, organize meetings, plan their duties, and mediate internal conflicts</li>
         </ul>
-
-        <hr />
-        <h6>volunteer</h6>
-        <hr />
-        <h4>northwest arkansas givecamp</h4>
-        <h5>fayetteville, ar</h5>
-        <ul>
-          <li>Non profit for non profits around Northwest AR, grouping software engineers and project managers to help
-            redesign and develop websites for local non profits </li>
-          <li>Worked closely with a small team for the Essentials Outreach nonprofit (who provides free hygiene products low
-            income people) to redesign their website for improved user experience</li>
-        </ul>
-
 
       </div>
 
