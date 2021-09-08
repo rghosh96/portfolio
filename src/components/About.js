@@ -24,7 +24,8 @@ const About = (props) => {
       <div className="info"><h3>os of choice: &nbsp; </h3> <p>mac</p></div>
       <hr />
       <h3>interests:</h3>
-      <p>doing my nails (i make my own press-ons), painting (watercolor), drawing (ink), running, graphic design
+      <p>doing my nails (i make my own press-ons), painting (watercolor), drawing (ink), running, graphic design, productivity
+        youtube
       </p>
       <h3>favorite fonts:</h3>
       <p>been rlly into montesserat, quicksand, & spartan lately

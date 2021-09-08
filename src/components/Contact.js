@@ -11,7 +11,6 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup'; // for everything
 import * as emailjs from 'emailjs-com'
 import { Button, Modal } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
 
 function MyVerticallyCenteredModal(props) {
   return (

@@ -16,10 +16,11 @@ const Research = (props) => {
             <hr />
             <div className="center">
                 <p>i am currently a 1st year 
-                <a href="https://en.wikipedia.org/wiki/Human-centered_computing" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> human-centered-computing</a> phD student at the 
+                <a class="links" href="https://en.wikipedia.org/wiki/Human-centered_computing" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> human-centered-computing</a> phD student at the 
                 university of florida in the
-                computer & information science & engineering department. i'm a member of the 
-                <a href="https://verg.cise.ufl.edu" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Virtual Experiences Research Group (VERG)</a> lab.
+                <a class="links" href="https://www.cise.ufl.edu/" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> computer & information science & engineering </a> 
+                department. i'm a member of the 
+                <a class="links" href="https://verg.cise.ufl.edu" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Virtual Experiences Research Group (VERG)</a> lab.
                 </p>
             </div> 
 
@@ -30,7 +31,7 @@ const Research = (props) => {
             
             <h3>current project(s):</h3>
             <p>currently, i am working on the 
-            <a href="https://jou.ufl.edu/alex" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Colorectal Cancer (CRC) Project</a>.</p>
+            <a class="links" href="https://jou.ufl.edu/alex" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Colorectal Cancer (CRC) Project</a>.</p>
         
             <hr />
             <h6>publications</h6>

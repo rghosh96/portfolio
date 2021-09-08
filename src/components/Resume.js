@@ -18,7 +18,7 @@ const Resume = (props) => {
       </div>
       <h2>resume</h2>
       <div className="center">
-        <h4>view my "official" resume <span> <a href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
+        <h4>view my "official" resume <span> <a class="links" href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
       </div>
       <hr />
       <div className="info"><h3>grad (current): &nbsp; </h3> <p>university of florida, gainesville, fl</p></div>

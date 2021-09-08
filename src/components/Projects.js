@@ -30,7 +30,7 @@ const Projects = (props) => {
           <br></br>
 
           <p>also, check out my 
-            <a href="https://marketplace.visualstudio.com/publishers/Shira" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>vs code themes</a> (:</p>
+            <a class="links" href="https://marketplace.visualstudio.com/publishers/Shira" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> vs code themes</a> (:</p>
         </div>
         <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
         <div className="diamond-top-text">top</div></div>
