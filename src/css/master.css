@@ -23,5 +23,6 @@
 }
 
 .links:hover {
-  letter-spacing: 1px;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
 }
