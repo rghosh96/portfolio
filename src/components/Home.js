@@ -119,7 +119,7 @@ const Home = (props) => {
             <span className="title">h</span>
           </div>
         </div>
-        <p className="subtitle">computer scientist | phD student | software engineer | developer</p>
+        <p className="subtitle">phD student | developer</p>
         <hr />
         <div className="nav">
           <Link to="section" smooth={true} duration={1000}>
