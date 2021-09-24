@@ -16,13 +16,3 @@
   border: 1px solid grey;
   border-radius: 45px;
 }
-
-.links {
-  text-decoration: none !important;
-  transition: 0.2s ease-in;
-}
-
-.links:hover {
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-}

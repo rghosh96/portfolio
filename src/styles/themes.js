@@ -5,6 +5,7 @@ export const lightTheme = {
   lightShadow: '#FFFFFF',
   darkShadow: '#949494',
   accent: '#e0a100',
+  accentDark: '#b98500',
 
   cursive: '"La Belle Aurore", cursive',
   sansSerif: '"Quicksand", sans-serif',
@@ -19,6 +20,7 @@ export const lightTheme = {
     lightShadow: '#525252',
     darkShadow: '#000000',
     accent: '#ffc4d7',
+    accentDark: '#ff89af',
 
     cursive: '"La Belle Aurore", cursive',
     sansSerif: '"Quicksand", sans-serif',

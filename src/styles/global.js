@@ -85,12 +85,12 @@ export const GlobalStyles = createGlobalStyle`
   
   p {
     font-family: ${({ theme }) => theme.sansSerif};
-    font-size: 13px;
+    font-size: 15px;
   }
 
   li {
     font-family: ${({ theme }) => theme.sansSerif};
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .logo {
@@ -323,7 +323,17 @@ stroke-width: 21 !important;
 .diamond2 path {
   stroke: ${({ theme }) => theme.accent} !important;
   stroke-width: 23 !important;
-  }
+}
+
+.links {
+  text-decoration: none !important;
+  transition: 0.2s ease-in;
+}
+
+.links:hover {
+  color: ${({ theme }) => theme.accentDark}  !important;
+  transition: 0.2s ease-in;
+}
 
   @media only screen and (max-width: 375px) {
     .btn-link, .btn-primary {
