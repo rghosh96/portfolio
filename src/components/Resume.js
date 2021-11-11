@@ -19,7 +19,7 @@ const Resume = (props) => {
        
       <br/>
       <br/>
-      <Link to="/">
+      <Link to="/portfolio">
       <h8> -rg-</h8></Link>
     <div className="section-container" >
     <motion.div 
