@@ -5,20 +5,22 @@ import { withTheme } from 'styled-components'
 import {ReactComponent as Diamond } from '../css/diamond.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubAlt} from '@fortawesome/free-brands-svg-icons';
-import { animateScroll as scroll } from 'react-scroll'
+import { Button } from 'react-bootstrap'
 
 const Projects = (props) => {
     return (
-      <div className="section-container">
+      <div className="home-section">
         <div className="diamond-header">
           <Diamond className="diamond2"></Diamond>
           <Diamond className="diamond2"></Diamond>
           <Diamond className="diamond2"></Diamond>
         </div>
         <h2>projects</h2>
-        <hr />
-        <div className="center">
-          <p>check out my github for random projects i've done</p>
+        <br/>
+        <div className="projects-section">
+          <div style={{textAlign: 'center'}}>
+            <p>going to update this soon!!!</p>
+          <p>in the meantime, check out my github for random projects i've done</p>
           <a href="https://github.com/rghosh96" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               color={props.theme.accent}
@@ -29,11 +31,15 @@ const Projects = (props) => {
 
           <br></br>
 
-          <p>also, check out my 
-            <a class="links" href="https://marketplace.visualstudio.com/publishers/Shira" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> vs code themes</a> (:</p>
+          <p>also, check out my vscode themes! or feel free to suggest one for me (:</p>
+          <Button 
+            variant="generic"
+            href="https://marketplace.visualstudio.com/publishers/Shira" 
+            target="_blank"
+             rel="noopener noreferrer">
+            my vscode themes</Button>
         </div>
-        <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
-        <div className="diamond-top-text">top</div></div>
+        </div>
       </div>
     )
   }

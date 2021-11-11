@@ -78,7 +78,7 @@ const Contact = (props) => {
 
     console.log(formik.errors)
     return (
-      <div className="section-container">
+      <div className="home-section">
         <div className="diamond-header">
           <Diamond className="diamond2"></Diamond>
           <Diamond className="diamond2"></Diamond>
@@ -86,9 +86,9 @@ const Contact = (props) => {
         </div>
         <h2>contact</h2>
         <div className="center">
-        <p>questions? comments? pls feel free to reach out (:</p>
+        <p>questions? comments? pls to reach out! (:</p>
         </div>      
-        <hr/>
+          <br/>
         <form onSubmit={formik.handleSubmit}>
           <input type="text" name="name" onChange={formik.handleChange} value={formik.values.name}/>
           <label htmlFor="name">name</label> 

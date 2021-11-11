@@ -1,103 +1,92 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../css/home.css';
 import '../css/master.css';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle, faFileAlt, faCode, faEnvelope, faBookOpen } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faCode, faEnvelope, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { withTheme } from 'styled-components'
 import { ReactComponent as Diamond } from '../css/diamond.svg'
-import AboutPage from './About';
-import ResumePage from './Resume';
+import AboutSection from './About';
 import ProjectsPage from './Projects';
 import ResearchPage from './Research';
 import ContactPage from './Contact';
-import { useTransition, animated } from 'react-spring'
 import { Link } from 'react-scroll'
+import { motion } from 'framer-motion'
 
 const Home = (props) => {
-  const [about, setAbout] = useState(false);
-  const [resume, setResume] = useState(false);
-  const [projects, setProjects] = useState(false);
-  const [research, setResearch] = useState(false);
-  const [contact, setContact] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
-  const aboutTransition = useTransition(about, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
-    leave: { opacity: 0 },
-  })
-
-  const resumeTransition = useTransition(resume, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
-    leave: { opacity: 0 },
-  })
-
-  const projectsTransition = useTransition(projects, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
-    leave: { opacity: 0 },
-  })
-
-  const researchTransition = useTransition(research, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
-    leave: { opacity: 0 },
-  })
-
-  const contactTransition = useTransition(contact, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, minWidth: '100%', display: 'flex', justifyContent: 'center' },
-    leave: { opacity: 0 },
-  })
-
-  const linkClicked = (link) => {
-    switch (link) {
-      case "about":
-        setAbout(!about);
-        setResume(false);
-        setProjects(false);
-        setResearch(false);
-        setContact(false);
-        break;
-      case "resume":
-        setResume(!resume)
-        setAbout(false);
-        setProjects(false);
-        setResearch(false);
-        setContact(false);
-        break;
-      case "projects":
-        setProjects(!projects);
-        setResume(false);
-        setAbout(false);
-        setResearch(false);
-        setContact(false);
-        break;
-      case "research":
-        setContact(false)
-        setResume(false);
-        setProjects(false);
-        setResearch(!research);
-        setAbout(false);
-        break;
-      case "contact":
-        setContact(!contact)
-        setResume(false);
-        setProjects(false);
-        setResearch(false);
-        setAbout(false);
-        break;
-      default:
-        break;
+  useEffect(() => {
+    function handleScroll() {
+      console.log("scrolling")
+      const yPos = window.scrollY;
+      const windowHeight = window.innerHeight;
+      console.log(windowHeight)
+      console.log(yPos)
+      yPos > windowHeight ? setShowNav(true) : setShowNav(false)
     }
-  }
-
-
+    window.addEventListener('scroll', handleScroll, false);
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false);
+    }
+  })
 
   return (
+    <div class="main">
+      <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
+      <div className="navigation">
+
+<Link to="sectionAbout" className="navItem" smooth={true} duration={1000}>
+  <FontAwesomeIcon
+    color={props.theme.accent}
+    icon={faUserCircle}
+    size='1x'
+  />
+  <p className="navLink">About</p>
+
+</Link>
+
+<Link className="navItem" to="sectionProjects" smooth={true} duration={1000}>
+<FontAwesomeIcon
+    color={props.theme.accent}
+    icon={faCode}
+    size='1x'
+  />
+<p className="navLink">Projects</p>
+
+</Link>
+
+<Link className="navItem" to="sectionResearch" smooth={true} duration={1000}>
+<FontAwesomeIcon
+    color={props.theme.accent}
+    icon={faBookOpen}
+    size='1x'
+  />
+<p className="navLink">Research</p>
+
+</Link>
+
+<Link className="navItem" to="sectionContact" smooth={true} duration={1000}>
+<FontAwesomeIcon
+    color={props.theme.accent}
+    icon={faEnvelope}
+    size='1x'
+  />
+<p className="navLink">Contact</p>
+
+</Link>
+
+</div>
+        </motion.div>
+       
     <div className="home-container">
+      
       <div className="home">
+      <motion.div 
+    initial={{opacity: 0, scaleX: 0}} 
+    animate={{opacity: 1, scaleX: 1}} 
+    exit={{opacity: 0, scaleX: 0}} 
+    transition={{duration: 1}}>
         <h1 className="logo">rg</h1>
         <div className="title-container">
           <div>
@@ -122,8 +111,8 @@ const Home = (props) => {
         <p className="subtitle">phD student | developer</p>
         <hr />
         <div className="nav">
-          <Link to="section" smooth={true} duration={1000}>
-            <Button variant={about ? "primary" : "link"} onClick={() => linkClicked("about")}>
+          <Link to="sectionAbout" smooth={true} duration={1000}>
+            <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faUserCircle}
@@ -132,28 +121,8 @@ const Home = (props) => {
               <p class="button-label">about</p>
             </Button></Link>
 
-            <Link to="section" smooth={true} duration={1000}>
-            <Button variant={research ? "primary" : "link"} onClick={() => linkClicked("research")}>
-              <FontAwesomeIcon
-                color={props.theme.accent}
-                icon={faBookOpen}
-                size='2x'
-              />
-              <p class="button-label">research</p>
-            </Button></Link>
-
-          <Link to="section" smooth={true} duration={1000}>
-            <Button variant={resume ? "primary" : "link"} onClick={() => linkClicked("resume")}>
-              <FontAwesomeIcon
-                color={props.theme.accent}
-                icon={faFileAlt}
-                size='2x'
-              />
-              <p class="button-label">resume</p>
-            </Button></Link>
-
-          <Link to="section" smooth={true} duration={1000}>
-            <Button variant={projects ? "primary" : "link"} onClick={() => linkClicked("projects")}>
+            <Link to="sectionProjects" smooth={true} duration={1000}>
+            <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faCode}
@@ -162,8 +131,30 @@ const Home = (props) => {
               <p class="button-label">projects</p>
             </Button></Link>
 
-          <Link to="section" smooth={true} duration={1000}>
-            <Button variant={contact ? "primary" : "link"} onClick={() => linkClicked("contact")}>
+            <Link to="sectionResearch" smooth={true} duration={1000}>
+            <Button variant="link">
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faBookOpen}
+                size='2x'
+              />
+              <p class="button-label">research</p>
+            </Button></Link>
+
+          {/* <Link to="section" smooth={true} duration={1000}>
+            <Button variant="link">
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faFileAlt}
+                size='2x'
+              />
+              <p class="button-label">resume</p>
+            </Button></Link> */}
+
+          
+
+          <Link to="sectionContact" smooth={true} duration={1000}>
+            <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faEnvelope}
@@ -174,7 +165,8 @@ const Home = (props) => {
         </div>
 
 
-        <div id="section">
+        </motion.div>
+        {/* <div id="section">
           {aboutTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><AboutPage /></animated.div>)}
           {resumeTransition.map(({ item, key, props }) =>
@@ -185,7 +177,15 @@ const Home = (props) => {
             item && <animated.div key={key} style={props}><ResearchPage /></animated.div>)}
           {contactTransition.map(({ item, key, props }) =>
             item && <animated.div key={key} style={props}><ContactPage /></animated.div>)}
-        </div></div>
+        </div> */}
+        </div>
+        
+    </div>
+    <div class="sectionAbout"><AboutSection/></div>
+    <div class="sectionProjects"><ProjectsPage/></div>
+    <div class="sectionResearch"><ResearchPage/></div>
+    <div class="sectionContact"><ContactPage/></div>
+    
     </div>
   )
 }

@@ -19,15 +19,69 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 
+  a:hover {
+    text-decoration: none !important;
+  }
+  .navigation {
+    position: fixed;
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 1px solid ${({ theme }) => theme.accent};
+    margin: auto; 
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: ${({ theme }) => theme.bg} !important;
+    z-index: 99999;
+  }
+
+  .navLine {
+    width:35%;
+  }
+
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .2s ease-in-out;
+    margin-right: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
+  .navItem:hover {
+    transform: scale(1.1);
+  }
+  .navItem .navLink {
+    text-decoration: none !important; 
+    text-transform: uppercase;
+    font-size: 11px;
+    transition: .2s ease-in-out;
+    color: ${({ theme }) => theme.text} !important;
+    margin-bottom: 5px !important;
+    opacity: 0;
+  }
+  .navItem:hover .navLink {
+    text-decoration: none !important;
+    color: ${({ theme }) => theme.accent} !important;
+    opacity: 1;
+  }
+  .dot {
+    height: 5px;
+    width: 5px;
+    background-color: ${({ theme }) => theme.accent} !important;
+    border-radius: 50%;
+  }
+
   .section-container {
     border: 1px solid ${({ theme }) => theme.accent};
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    position: absolute;
-    margin-top: 21px;
-    padding: 15px;
+    padding: 21px;
+    width: 55%;
   }
 
   .to-top {
@@ -51,6 +105,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.accent};
     text-align: center;
     margin-bottom: 0px !important;
+    font-size: 43px;
   }
 
   h3 {
@@ -82,10 +137,34 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.accent};
     margin: 0;
   }
+
+  h7 {
+    font-family: ${({ theme }) => theme.bold};
+    color: ${({ theme }) => theme.accent};
+    font-size: 27px;
+    margin-bottom: 0px !important;
+  }
+
+  h8 {
+    font-family: ${({ theme }) => theme.cursive};
+    font-size: 70px;
+    opacity: .5;
+    line-height: 1;
+    text-align: center;
+    color: ${({ theme }) => theme.accent};
+    margin: 0;
+    transition: .2s ease-in-out;
+  }
+
+  h8:hover {
+    opacity: .8;
+    font-size: 75px;
+  }
   
   p {
     font-family: ${({ theme }) => theme.sansSerif};
-    font-size: 15px;
+    font-size: 17px;
+    margin-bottom: 5px !important;
   }
 
   li {
@@ -100,6 +179,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 125px;
     letter-spacing: 3px;
     line-height: 2px;
+    text-align: center;
   }
 
   .center {
@@ -162,10 +242,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .profile-image {
-    height: 200px;
-    width: 150px;
-    border-radius: 30px;
-    margin-bottom: 35px;
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 55px;
     box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
   }
@@ -181,6 +262,23 @@ export const GlobalStyles = createGlobalStyle`
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow} inset !important;
     height: 65px;
     width: 65px;
+  }
+
+  .btn-generic {
+    background-color: ${({ theme }) => theme.accent} !important;
+    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+    margin: 15px;
+    font-family: ${({ theme }) => theme.bold};
+    font-size: 11px;
+    padding: 11px;
+    border-radius: 11px;
+    transition: .2s ease-in-out;
+    color: ${({ theme }) => theme.bg} !important;
+  }
+
+  .btn-generic:hover {
+    transform: scale(1.1);
   }
 
   form input,
@@ -344,6 +442,29 @@ stroke-width: 21 !important;
 
     .button-label {
       opacity: 1 ;
+    }
+
+    h7 {
+      font-size: 21px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    .section-container {
+      width: 90%;
+    }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      margin-right: 0;
+      margin-bottom: 11px !important;
     }
   }
 

@@ -7,6 +7,7 @@ import { lightTheme, darkTheme } from './styles/themes';
 import { GlobalStyles } from './styles/global';
 import './css/master.css';
 import ToggleSwitch from './components/Toggle';
+import ResumePage from './components/Resume';
 
 function App(props) {
   // check if persisting theme exists, set to last theme; else light is default
@@ -31,12 +32,13 @@ const toggleTheme = () => {
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <div className="container">
+      <div className="leContainer">
       <ToggleSwitch theme={theme === 'light' ? lightTheme : darkTheme} toggleTheme={toggleTheme}>Toggle theme</ToggleSwitch>
       <GlobalStyles />
       <BrowserRouter>
       <Switch>
-        <Route exact path="/portfolio" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/resume" component={ResumePage} />
       </Switch>
       </BrowserRouter>
       </div>

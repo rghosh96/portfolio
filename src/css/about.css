@@ -24,6 +24,24 @@
   justify-content: center;
 }
 
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+
+.projects-section {
+  width: 75%;
+}
+
+.research-section {
+  width: 75%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
 @keyframes floating {
   0% {
     transform: translate(0, 0px) rotate(101deg);
@@ -52,5 +70,18 @@
 @keyframes rotate2 {
   100% {
     transform: rotateY(90deg);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .about-section,
+  .research-section,
+  .info {
+    flex-direction: column;
+  }
+  .info {
+    text-align: center;
+    justify-self: center;
+    align-items: center;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/about.css';
 import '../css/master.css';
 import '../css/resume.css';
@@ -7,10 +7,26 @@ import { ReactComponent as Diamond } from '../css/diamond.svg'
 import ResumePDF from '../assets/Resume.pdf';
 import { animateScroll as scroll } from 'react-scroll'
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 const Resume = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
+    <div className="resume">
+       
+      <br/>
+      <br/>
+      <Link to="/">
+      <h8> -rg-</h8></Link>
     <div className="section-container" >
+    <motion.div 
+    initial={{opacity: 0, scaleX: 0}} 
+    animate={{opacity: 1, scaleX: 1}} 
+    exit={{opacity: 0, scaleX: 0}} 
+    transition={{duration: 1}}>
       <div className="diamond-header">
         <Diamond className="diamond2"></Diamond>
         <Diamond className="diamond2"></Diamond>
@@ -18,7 +34,7 @@ const Resume = (props) => {
       </div>
       <h2>resume</h2>
       <div className="center">
-        <h4>view my "official" resume <span> <a class="links" href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
+        <h4>View PDF Version of Resume <span> <a class="links" href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
       </div>
       <hr />
       <div className="info"><h3>grad (current): &nbsp; </h3> <p>university of florida, gainesville, fl</p></div>
@@ -214,6 +230,9 @@ const Resume = (props) => {
 
       <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top" />
         <div className="diamond-top-text">top</div></div>
+        </motion.div>
+    </div>
+    
     </div>
   )
 }

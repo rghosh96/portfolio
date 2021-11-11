@@ -5,42 +5,41 @@ import { withTheme } from 'styled-components'
 import { ReactComponent as Diamond } from '../css/diamond.svg'
 import profile from '../assets/profile.gif'
 import { animateScroll as scroll } from 'react-scroll'
+import { Button } from 'react-bootstrap'
+import { Link } from "react-router-dom";
+
 
 const About = (props) => {
   return (
-    <div className="section-container" >
+    <div className="home-section">
       <div className="diamond-header">
         <Diamond className="diamond2"></Diamond>
         <Diamond className="diamond2"></Diamond>
         <Diamond className="diamond2"></Diamond>
       </div>
       <h2>about</h2>
-      <hr />
+      <div className="about-section">
+        <div>
+    
       <div className="image-container">
         <img className="profile-image" src={profile} alt="loading..." />
       </div>
-      <div className="info"><h3>enneagram: &nbsp; </h3> <p>type 4 (individualist)</p></div>
-      <div className="info"><h3>creative type: &nbsp; </h3> <p>dreamer</p></div>
-      <div className="info"><h3>os of choice: &nbsp; </h3> <p>mac</p></div>
-      <hr />
-      <h3>interests:</h3>
-      <p>doing my nails (i make my own press-ons), painting (watercolor), drawing (ink), running, graphic design, productivity
-        youtube
+      </div>
+      <div>
+      <h7>hello, i'm rashi!</h7>
+      <p>i'm a libra, an enneagram type IV (individualist), and my creative type is a dreamer. i love web development and doing my
+        nails (i make my own press-ons). my fav fonts are currently montserrat, quicksand, and spartan!
       </p>
-      <h3>favorite fonts:</h3>
-      <p>been rlly into montesserat, quicksand, & spartan lately
+      <p>i'm also currently a first year phD student at University of Florida. i got my bachelor's in computer science,
+        & have industry experience from working briefly at a healthcare information technology company.
       </p>
-      <h3>favorite coding softwares:</h3>
-      <p>good old terminal + decked out text editor (vs code)
-      </p>
-      <h3>how did u make this portfolio site?</h3>
-      <p>made from scratch using react!
-      </p>
-      <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top" />
-        <div className="diamond-top-text">top</div></div>
+      </div>
+    </div>
+    <Link to="/resume">
+    <Button variant="generic">check out my resume!</Button></Link>
     </div>
   )
 }
 
-const AboutPage = withTheme(About);
-export default AboutPage;
+const AboutSection = withTheme(About);
+export default AboutSection;
