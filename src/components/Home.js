@@ -21,7 +21,7 @@ const Home = (props) => {
     function handleScroll() {
       console.log("scrolling")
       const yPos = window.scrollY;
-      const windowHeight = window.innerHeight;
+      const windowHeight = window.innerHeight - (window.innerHeight/2);
       console.log(windowHeight)
       console.log(yPos)
       yPos > windowHeight ? setShowNav(true) : setShowNav(false)
