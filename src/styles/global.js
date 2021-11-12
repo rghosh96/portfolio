@@ -439,7 +439,7 @@ stroke-width: 21 !important;
   transition: 0.2s ease-in;
 }
 
-  @media only screen and (max-width: 415px) {
+  @media only screen and (max-width: 655px) {
     .btn-link, .btn-primary {
       display: flex;
       flex-direction: column;
