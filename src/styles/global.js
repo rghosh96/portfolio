@@ -26,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     position: fixed;
     width: 100%;
     padding-top: 20px;
+    height: 60px;
     border-bottom: 1px solid ${({ theme }) => theme.accent};
     margin: auto; 
     left: 0;
@@ -60,19 +61,26 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 11px;
     transition: .2s ease-in-out;
     color: ${({ theme }) => theme.text} !important;
-    margin-bottom: 5px !important;
     opacity: 0;
+    height: 0;
+    margin: 0;
   }
   .navItem:hover .navLink {
     text-decoration: none !important;
     color: ${({ theme }) => theme.accent} !important;
     opacity: 1;
+    height: 100%;
+    margin: 0;
   }
   .dot {
     height: 5px;
     width: 5px;
     background-color: ${({ theme }) => theme.accent} !important;
     border-radius: 50%;
+  }
+
+  .navItem:hover .dot {
+    opacity: 0;
   }
 
   .section-container {

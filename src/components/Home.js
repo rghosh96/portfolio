@@ -16,6 +16,10 @@ import { animateScroll as scroll } from 'react-scroll'
 
 const Home = (props) => {
   const [showNav, setShowNav] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [projects, setProjects] = useState(false);
+  const [research, setResearch] = useState(false);
+  const [contact, setContact] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
@@ -32,48 +36,83 @@ const Home = (props) => {
     }
   })
 
+  const linkClicked = (link) => {
+    switch (link) {
+      case "about":
+        setAbout(true);
+        setProjects(false);
+        setResearch(false);
+        setContact(false);
+        break;
+      case "projects":
+        setProjects(true);
+        setAbout(false);
+        setResearch(false);
+        setContact(false);
+        break;
+      case "research":
+        setContact(false)
+        setProjects(false);
+        setResearch(true);
+        setAbout(false);
+        break;
+      case "contact":
+        setContact(true)
+        setProjects(false);
+        setResearch(false);
+        setAbout(false);
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <div class="main">
       <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
       <div className="navigation">
 
-<Link to="sectionAbout" className="navItem" smooth={true} duration={1000}>
+<Link to="sectionAbout" className="navItem" smooth={true} duration={1000} onClick={() => linkClicked("about")}>
   <FontAwesomeIcon
     color={props.theme.accent}
     icon={faUserCircle}
     size='1x'
   />
   <p className="navLink">About</p>
+  {about ? <div class="dot"/> : <div/>}
 
 </Link>
 
-<Link className="navItem" to="sectionProjects" smooth={true} duration={1000}>
+<Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faCode}
     size='1x'
   />
 <p className="navLink">Projects</p>
+{projects ? <div class="dot"/> : <div/>}
 
 </Link>
 
-<Link className="navItem" to="sectionResearch" smooth={true} duration={1000}>
+<Link className="navItem" to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faBookOpen}
     size='1x'
   />
 <p className="navLink">Research</p>
+{research ? <div class="dot"/> : <div/>}
 
 </Link>
 
-<Link className="navItem" to="sectionContact" smooth={true} duration={1000}>
+<Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faEnvelope}
     size='1x'
   />
 <p className="navLink">Contact</p>
+{contact ? <div class="dot"/> : <div/>}
 
 </Link>
 
@@ -112,7 +151,7 @@ const Home = (props) => {
         <p className="subtitle">phD student | developer</p>
         <hr />
         <div className="nav">
-          <Link to="sectionAbout" smooth={true} duration={1000}>
+          <Link to="sectionAbout" smooth={true} duration={1000} onClick={() => linkClicked("about")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -122,7 +161,7 @@ const Home = (props) => {
               <p class="button-label">about</p>
             </Button></Link>
 
-            <Link to="sectionProjects" smooth={true} duration={1000}>
+            <Link to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -132,7 +171,7 @@ const Home = (props) => {
               <p class="button-label">projects</p>
             </Button></Link>
 
-            <Link to="sectionResearch" smooth={true} duration={1000}>
+            <Link to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -142,19 +181,9 @@ const Home = (props) => {
               <p class="button-label">research</p>
             </Button></Link>
 
-          {/* <Link to="section" smooth={true} duration={1000}>
-            <Button variant="link">
-              <FontAwesomeIcon
-                color={props.theme.accent}
-                icon={faFileAlt}
-                size='2x'
-              />
-              <p class="button-label">resume</p>
-            </Button></Link> */}
-
           
 
-          <Link to="sectionContact" smooth={true} duration={1000}>
+          <Link to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
