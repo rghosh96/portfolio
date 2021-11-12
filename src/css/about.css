@@ -78,8 +78,6 @@
   .research-section,
   .info {
     flex-direction: column;
-  }
-  .info {
     text-align: center;
     justify-self: center;
     align-items: center;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/about.css';
 import '../css/master.css';
 import '../css/resume.css';
@@ -14,6 +14,23 @@ const Resume = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      console.log("scrolling")
+      const yPos = window.scrollY;
+      const windowHeight = window.innerHeight - (window.innerHeight/2);
+      console.log(windowHeight)
+      console.log(yPos)
+      yPos > windowHeight ? setShowNav(true) : setShowNav(false)
+    }
+    window.addEventListener('scroll', handleScroll, false);
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false);
+    }
+  })
   return (
     <div className="resume">
        
@@ -228,8 +245,10 @@ const Resume = (props) => {
 
       </div>
 
-      <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top" />
+      <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
+    <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
         <div className="diamond-top-text">top</div></div>
+      </motion.div>
         </motion.div>
     </div>
     

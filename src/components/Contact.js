@@ -145,10 +145,6 @@ const Contact = (props) => {
         onHide={() => setModalShow(false)}
       />
 
-
-
-        <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
-        <div className="diamond-top-text">top</div></div>
       </div>
     )
   }

@@ -18,6 +18,7 @@ const About = (props) => {
         <Diamond className="diamond2"></Diamond>
       </div>
       <h2>about</h2>
+      <br/>
       <div className="about-section">
         <div>
     

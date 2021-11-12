@@ -86,14 +86,20 @@ export const GlobalStyles = createGlobalStyle`
 
   .to-top {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 1rem;
+    right: 1rem;
     margin: 5px;
     padding-bottom: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    transform: scale(1.1);
+    transition: .2s ease-in-out
+  }
+
+  .to-top:hover {
+    transform: scale(1.3);
   }
 
   h1 {
@@ -379,8 +385,8 @@ export const GlobalStyles = createGlobalStyle`
   position: absolute;
   text-align: center;
   transform: translateY(15px);
-  font-family: ${({ theme }) => theme.sansSerif};
-  font-size: 9px;
+  font-family: ${({ theme }) => theme.bold};
+  font-size: 11px;
 }
 
 .diamond {
@@ -445,7 +451,7 @@ stroke-width: 21 !important;
     }
 
     h7 {
-      font-size: 21px;
+      font-size: 19px;
     }
 
     p {
@@ -453,7 +459,7 @@ stroke-width: 21 !important;
     }
 
     h2 {
-      font-size: 25px;
+      font-size: 33px;
     }
 
     .section-container {
@@ -464,7 +470,7 @@ stroke-width: 21 !important;
       width: 100px;
       height: 100px;
       margin-right: 0;
-      margin-bottom: 11px !important;
+      margin-bottom: 17px !important;
     }
   }
 

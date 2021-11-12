@@ -12,6 +12,7 @@ import ResearchPage from './Research';
 import ContactPage from './Contact';
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Home = (props) => {
   const [showNav, setShowNav] = useState(false);
@@ -166,18 +167,6 @@ const Home = (props) => {
 
 
         </motion.div>
-        {/* <div id="section">
-          {aboutTransition.map(({ item, key, props }) =>
-            item && <animated.div key={key} style={props}><AboutPage /></animated.div>)}
-          {resumeTransition.map(({ item, key, props }) =>
-            item && <animated.div key={key} style={props}><ResumePage /></animated.div>)}
-          {projectsTransition.map(({ item, key, props }) =>
-            item && <animated.div key={key} style={props}><ProjectsPage /></animated.div>)}
-          {researchTransition.map(({ item, key, props }) =>
-            item && <animated.div key={key} style={props}><ResearchPage /></animated.div>)}
-          {contactTransition.map(({ item, key, props }) =>
-            item && <animated.div key={key} style={props}><ContactPage /></animated.div>)}
-        </div> */}
         </div>
         
     </div>
@@ -185,6 +174,11 @@ const Home = (props) => {
     <div class="sectionProjects"><ProjectsPage/></div>
     <div class="sectionResearch"><ResearchPage/></div>
     <div class="sectionContact"><ContactPage/></div>
+
+    <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
+    <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
+        <div className="diamond-top-text">top</div></div>
+      </motion.div>
     
     </div>
   )
