@@ -6,6 +6,7 @@ import {ReactComponent as Diamond } from '../css/diamond.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubAlt} from '@fortawesome/free-brands-svg-icons';
 import { Button } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 const Projects = (props) => {
     return (
@@ -38,6 +39,7 @@ const Projects = (props) => {
             target="_blank"
              rel="noopener noreferrer">
             my vscode themes</Button>
+            <Link to="parallax"><Button variant="generic">parallax text</Button></Link>
         </div>
         </div>
       </div>

@@ -19,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 
+  .parallax {
+    width: 100%;
+  }
+
   a:hover {
     text-decoration: none !important;
   }

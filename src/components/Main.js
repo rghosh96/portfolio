@@ -15,8 +15,8 @@ import { motion } from 'framer-motion'
 import { animateScroll as scroll } from 'react-scroll'
 
 
-const Home = (props) => {
-  const [showNav, setShowNav] = useState(false);
+const Main = (props) => {
+    const [showNav, setShowNav] = useState(false);
   const [about, setAbout] = useState(false);
   const [projects, setProjects] = useState(false);
   const [research, setResearch] = useState(false);
@@ -67,67 +67,8 @@ const Home = (props) => {
         break;
     }
   }
-
-  return (
-    <div class="main">
-      <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
-      <div className="navigation">
-
-<Link to="sectionAbout" className="navItem" smooth={true} duration={1000} onClick={() => linkClicked("about")}>
-  <FontAwesomeIcon
-    color={props.theme.accent}
-    icon={faUserCircle}
-    size='1x'
-  />
-  <p className="navLink">About</p>
-  {about ? <div class="dot"/> : <div/>}
-
-</Link>
-
-<Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
-<FontAwesomeIcon
-    color={props.theme.accent}
-    icon={faCode}
-    size='1x'
-  />
-<p className="navLink">Projects</p>
-{projects ? <div class="dot"/> : <div/>}
-
-</Link>
-
-<Link className="navItem" to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
-<FontAwesomeIcon
-    color={props.theme.accent}
-    icon={faBookOpen}
-    size='1x'
-  />
-<p className="navLink">Research</p>
-{research ? <div class="dot"/> : <div/>}
-
-</Link>
-
-<Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
-<FontAwesomeIcon
-    color={props.theme.accent}
-    icon={faEnvelope}
-    size='1x'
-  />
-<p className="navLink">Contact</p>
-{contact ? <div class="dot"/> : <div/>}
-
-</Link>
-
-</div>
-        </motion.div>
-       
-    <div className="home-container">
-      
-      <div className="home">
-      <motion.div 
-    initial={{opacity: 0, scaleX: 0}} 
-    animate={{opacity: 1, scaleX: 1}} 
-    exit={{opacity: 0, scaleX: 0}} 
-    transition={{duration: 1}}>
+    return (
+        <div className="main">
         <h1 className="logo">rg</h1>
         <div className="title-container">
           <div>
@@ -193,26 +134,9 @@ const Home = (props) => {
               />
               <p class="button-label">contact</p>
             </Button></Link>
-        </div>
-
-
-        </motion.div>
-        </div>
-        
-    </div>
-    <div class="sectionAbout"><AboutSection/></div>
-    <div class="sectionProjects"><ProjectsPage/></div>
-    <div class="sectionResearch"><ResearchPage/></div>
-    <div class="sectionContact"><ContactPage/></div>
-
-    <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
-    <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>
-        <div className="diamond-top-text">top</div></div>
-      </motion.div>
-    
-    </div>
-  )
+        </div></div>
+    )
 }
 
-const HomePage = withTheme(Home);
-export default HomePage;
+const MainPage = withTheme(Main);
+export default MainPage;

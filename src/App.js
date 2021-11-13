@@ -8,6 +8,7 @@ import { GlobalStyles } from './styles/global';
 import './css/master.css';
 import ToggleSwitch from './components/Toggle';
 import ResumePage from './components/Resume';
+import ParallaxPage from './components/Parallax';
 
 function App(props) {
   // check if persisting theme exists, set to last theme; else light is default
@@ -39,6 +40,7 @@ const toggleTheme = () => {
       <Switch>
         <Route exact path="/portfolio" component={HomePage} />
         <Route exact path="/resume" component={ResumePage} />
+        <Route exact path="/parallax" component={ParallaxPage} />
       </Switch>
       </BrowserRouter>
       </div>
