@@ -7,6 +7,9 @@ import { faUserCircle, faCode, faEnvelope, faBookOpen } from '@fortawesome/free-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
+import Button from 'react-bootstrap/Button';
+import { ReactComponent as Diamond } from '../css/diamond.svg'
+import { animateScroll as scroll } from 'react-scroll'
 
 import MainPage from './Main';
 import AboutSection from './About';
@@ -21,27 +24,30 @@ const ParallaxTest = (props) => {
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
   console.log(url('stars', true))
 
-  useEffect(() => {
-    function handleScroll() {
-      console.log("scrolling")
-      const yPos = window.scrollY;
+  const handleScroll = () => {
+    if (parallax.current) {
+      console.log("IN HANDLE SCROLL")
+      console.log(parallax.current.current)
       const windowHeight = window.innerHeight - (window.innerHeight/2);
-      console.log(windowHeight)
-      console.log(yPos)
-      yPos > windowHeight ? setShowNav(true) : setShowNav(false)
+      parallax.current.current > windowHeight ? setShowNav(true) : setShowNav(false)
     }
-    window.addEventListener('scroll', handleScroll, false);
+  }
+  
+  useEffect(() => {
+    const container = document.querySelector('.parallax-class')
+    container.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll, false);
+      container.removeEventListener('scroll', handleScroll)
     }
-  })
+  }, [])
+
 
   return (
     <div class="parallax">
         <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
       <div className="navigation">
 
-<Link to="sectionAbout" className="navItem" smooth={true} duration={1000} >
+<Link to="sectionAbout" className="navItem" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(1)}>
   <FontAwesomeIcon
     color={props.theme.accent}
     icon={faUserCircle}
@@ -52,7 +58,7 @@ const ParallaxTest = (props) => {
 
 </Link>
 
-<Link className="navItem" to="sectionProjects" smooth={true} duration={1000} >
+<Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(2)}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faCode}
@@ -63,7 +69,7 @@ const ParallaxTest = (props) => {
 
 </Link>
 
-<Link className="navItem" to="sectionResearch" smooth={true} duration={1000} >
+<Link className="navItem" to="sectionResearch" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(3)}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faBookOpen}
@@ -74,7 +80,7 @@ const ParallaxTest = (props) => {
 
 </Link>
 
-<Link className="navItem" to="sectionContact" smooth={true} duration={1000} >
+<Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(4)}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faEnvelope}
@@ -87,7 +93,7 @@ const ParallaxTest = (props) => {
 
 </div>
         </motion.div>
-      <Parallax ref={parallax} pages={5}>
+      <Parallax ref={parallax} pages={5} enabled={true} className="parallax-class">
         <ParallaxLayer offset={1} speed={1}  />
         <ParallaxLayer offset={2} speed={1}  />
         <ParallaxLayer offset={3} speed={1}  />
@@ -113,9 +119,9 @@ const ParallaxTest = (props) => {
           }}
         />
 
-        <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
+        {/* <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
           <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
           <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
@@ -143,44 +149,108 @@ const ParallaxTest = (props) => {
           <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={2.5}
-          speed={-0.4}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            pointerEvents: 'none',
-          }}>
-          <img src={url('earth')} style={{ width: '60%' }} />
+        <ParallaxLayer offset={3} speed={0.4} style={{ opacity: 0.6 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: '80%',
-            backgroundPosition: 'center',
-            backgroundImage: url('clients', true),
-          }}
-        /> */}
+        <ParallaxLayer offset={3.6} speed={-0.1} style={{ opacity: 0.4 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={4} speed={0.8} style={{ opacity: 0.1 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={4.75} speed={-0.1} style={{ opacity: 0.4 }}>
+          <img src={url('cloud')} style={{fill: 'white', display: 'block', width: '20%', marginLeft: '60%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={0}
           speed={0.1}
-          onClick={() => parallax.current.scrollTo(1)}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <MainPage/>
+          <div className="main">
+        <h1 className="logo">rg</h1>
+        <div className="title-container">
+          <div>
+            <span className="title">r</span>
+            <span>
+              <Diamond className="diamond"></Diamond>
+              <Diamond className="diamond"></Diamond>
+              <Diamond className="diamond"></Diamond>
+            </span>
+            <span className="title">s</span>
+            <span className="title">h</span>
+            <span className="title">i &nbsp;</span>
+          </div>
+          <div>
+            <span className="title">g</span>
+            <span className="title">h</span>
+            <span className="title">o</span>
+            <span className="title">s</span>
+            <span className="title">h</span>
+          </div>
+        </div>
+        <p className="subtitle">phD student | developer</p>
+        <hr />
+        <div className="nav">
+          <Link to="sectionAbout" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(1)}>
+            <Button variant="link">
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faUserCircle}
+                size='2x'
+              />
+              <p class="button-label">about</p>
+            </Button></Link>
+
+            <Link to="sectionProjects" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(2)}>
+            <Button variant="link">
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faCode}
+                size='2x'
+              />
+              <p class="button-label">projects</p>
+            </Button></Link>
+
+            <Link to="sectionResearch" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(3)}>
+            <Button variant="link">
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faBookOpen}
+                size='2x'
+              />
+              <p class="button-label">research</p>
+            </Button></Link>
+
+          
+
+          <Link to="sectionContact" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(4)}>
+            <Button variant="link">
+              <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faEnvelope}
+                size='2x'
+              />
+              <p class="button-label">contact</p>
+            </Button></Link>
+        </div></div>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={1}
           speed={0.1}
-          onClick={() => parallax.current.scrollTo(2)}
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -196,9 +266,8 @@ const ParallaxTest = (props) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}
-          onClick={() => parallax.current.scrollTo(3)}>
-          <ResearchPage/>
+          }}>
+            <ProjectsPage/>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -208,9 +277,8 @@ const ParallaxTest = (props) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}
-          onClick={() => parallax.current.scrollTo(4)}>
-          <ProjectsPage/>
+          }}>
+          <ResearchPage/>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -220,11 +288,15 @@ const ParallaxTest = (props) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}
-          onClick={() => parallax.current.scrollTo(0)}>
+          }}>
           <ContactPage/>
         </ParallaxLayer>
       </Parallax>
+
+      <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
+    <div className="to-top" onClick={() => parallax.current.scrollTo(0)}><Diamond className="diamond-top"/>
+        <div className="diamond-top-text">top</div></div>
+      </motion.div>
       </div>
   )
 }
