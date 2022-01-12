@@ -9,15 +9,15 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import Button from 'react-bootstrap/Button';
 import { ReactComponent as Diamond } from '../css/diamond.svg'
-import { animateScroll as scroll } from 'react-scroll'
-
-import MainPage from './Main';
 import AboutSection from './About';
 import ResearchPage from './Research';
 import ProjectsPage from './Projects';
 import ContactPage from './Contact';
 
 const ParallaxTest = (props) => {
+  console.log("PROPS")
+  console.log(props)
+  const theme = props.theme.mode
   const parallax = useRef()
   const [showNav, setShowNav] = useState(false);
   const url = (name: string, wrap = false) =>
@@ -41,52 +41,95 @@ const ParallaxTest = (props) => {
     }
   }, [])
 
+  const [about, setAbout] = useState(false);
+  const [projects, setProjects] = useState(false);
+  const [research, setResearch] = useState(false);
+  const [contact, setContact] = useState(false);
+  const linkClicked = (link) => {
+    switch (link) {
+      case "about":
+        parallax.current.scrollTo(1)
+        setAbout(true);
+        setProjects(false);
+        setResearch(false);
+        setContact(false);
+        break;
+      case "projects":
+        parallax.current.scrollTo(2)
+        setProjects(true);
+        setAbout(false);
+        setResearch(false);
+        setContact(false);
+        break;
+      case "research":
+        parallax.current.scrollTo(3)
+        setContact(false)
+        setProjects(false);
+        setResearch(true);
+        setAbout(false);
+        break;
+      case "contact":
+        parallax.current.scrollTo(4)
+        setContact(true)
+        setProjects(false);
+        setResearch(false);
+        setAbout(false);
+        break;
+      default:
+        break;
+    }
+  }
+
 
   return (
     <div class="parallax">
         <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
       <div className="navigation">
 
-<Link to="sectionAbout" className="navItem" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(1)}>
+<Link to="sectionAbout" className="navItem" smooth={true} duration={1000} onClick={() => linkClicked("about")}>
   <FontAwesomeIcon
     color={props.theme.accent}
     icon={faUserCircle}
-    size='1x'
+    size='lg'
   />
   <p className="navLink">About</p>
+  {about ? <div class="dot"/> : <div/>}
 
 
 </Link>
 
-<Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(2)}>
+<Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faCode}
-    size='1x'
+    size='lg'
   />
 <p className="navLink">Projects</p>
+{projects ? <div class="dot"/> : <div/>}
 
 
 </Link>
 
-<Link className="navItem" to="sectionResearch" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(3)}>
+<Link className="navItem" to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faBookOpen}
-    size='1x'
+    size='lg'
   />
 <p className="navLink">Research</p>
+{research ? <div class="dot"/> : <div/>}
 
 
 </Link>
 
-<Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(4)}>
+<Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
 <FontAwesomeIcon
     color={props.theme.accent}
     icon={faEnvelope}
-    size='1x'
+    size='lg'
   />
 <p className="navLink">Contact</p>
+{contact ? <div class="dot"/> : <div/>}
 
 
 </Link>
@@ -204,7 +247,7 @@ const ParallaxTest = (props) => {
         <p className="subtitle">phD student | developer</p>
         <hr />
         <div className="nav">
-          <Link to="sectionAbout" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(1)}>
+          <Link to="sectionAbout" smooth={true} duration={1000} onClick={() => linkClicked("about")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -214,7 +257,7 @@ const ParallaxTest = (props) => {
               <p class="button-label">about</p>
             </Button></Link>
 
-            <Link to="sectionProjects" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(2)}>
+            <Link to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -224,7 +267,7 @@ const ParallaxTest = (props) => {
               <p class="button-label">projects</p>
             </Button></Link>
 
-            <Link to="sectionResearch" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(3)}>
+            <Link to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}
@@ -236,7 +279,7 @@ const ParallaxTest = (props) => {
 
           
 
-          <Link to="sectionContact" smooth={true} duration={1000} onClick={() => parallax.current.scrollTo(4)}>
+          <Link to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
             <Button variant="link">
               <FontAwesomeIcon
                 color={props.theme.accent}

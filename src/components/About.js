@@ -31,7 +31,7 @@ const About = (props) => {
       <p>i'm a libra, an enneagram type IV (individualist), and my creative type is a dreamer. i love web development and doing my
         nails (i make my own press-ons). my fav fonts are currently montserrat, quicksand, and spartan!
       </p>
-      <p>i'm also currently a first year phD student at University of Florida. i got my bachelor's in computer science,
+      <p>i'm also currently a first year phD student in Human Centered Computing at University of Florida. i got my bachelor's in computer science,
         & have industry experience from working briefly at a healthcare information technology company.
       </p>
       </div>

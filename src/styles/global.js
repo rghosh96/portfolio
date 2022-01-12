@@ -30,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
     position: fixed;
     width: 100%;
     padding-top: 20px;
-    height: 60px;
+    height: 75px;
     border-bottom: 1px solid ${({ theme }) => theme.accent};
     margin: auto; 
     left: 0;
@@ -205,6 +205,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .title {

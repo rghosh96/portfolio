@@ -32,7 +32,8 @@ const Research = (props) => {
 
 <br/>
             <h3>research interests:</h3>
-            <p>my primary motivations are mental health and preventative healthcare initiatives & how we can leverage virtual human 
+            <p>my primary motivations are mental health, preventative healthcare initiatives, & empowering marginalized 
+                communities & how we can leverage virtual human 
                 technology to address gaps & barriers
             </p>
             
