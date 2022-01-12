@@ -39,7 +39,6 @@ const Projects = (props) => {
             target="_blank"
              rel="noopener noreferrer">
             my vscode themes</Button>
-            <Link to="parallax"><Button variant="generic">parallax text</Button></Link>
         </div>
         </div>
       </div>
