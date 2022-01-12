@@ -11,7 +11,7 @@
 
 .main {
   height: 100%;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,10 +29,15 @@
 }
 
 .nav {
-  margin: 30px;
+  margin: 15px 30px 30px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 65%;
+}
+
+.description {
+  width: 505px;
 }
 
 .btn-link:hover {

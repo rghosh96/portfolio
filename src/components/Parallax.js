@@ -240,8 +240,10 @@ const ParallaxTest = (props) => {
             </div>
           </div>
 
-          <p className="subtitle">phD student | developer</p>
-          <hr />
+          <div class="description">
+            <p className="subtitle">phD student | developer</p>
+            <hr />
+          </div>
           <div className="nav">
             <Link to="sectionAbout" smooth={true} duration={1000} onClick={() => linkClicked("about")}>
             <Button variant="link">
