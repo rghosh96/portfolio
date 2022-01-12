@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .parallax {
-    width: 100%;
+      width: 100%;
   }
 
   a:hover {
