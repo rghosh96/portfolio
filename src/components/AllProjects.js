@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import '../../css/about.css';
-import '../../css/master.css';
-import '../../css/resume.css';
+import '../css/about.css';
+import '../css/master.css';
+import '../css/resume.css';
 import { withTheme } from 'styled-components'
-import { ReactComponent as Diamond } from '../../css/diamond.svg'
+import { ReactComponent as Diamond } from '../css/diamond.svg'
 import { animateScroll as scroll } from 'react-scroll'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';

@@ -1,10 +1,10 @@
-import portfolio from '../../assets/project_images/portfolio.png'
-import vsCode from '../../assets/project_images/vsCode.png'
-import mobile from '../../assets/project_images/mobile.png'
-import photoJournal from '../../assets/project_images/photoJournal.jpg'
-import todo from '../../assets/project_images/todo.jpg'
-import calculator from '../../assets/project_images/calculator.png'
-import blog from '../../assets/project_images/blog.jpg'
+import portfolio from '../assets/project_images/portfolio.png'
+import vsCode from '../assets/project_images/vsCode.png'
+import mobile from '../assets/project_images/mobile.png'
+import photoJournal from '../assets/project_images/photoJournal.jpg'
+import todo from '../assets/project_images/todo.jpg'
+import calculator from '../assets/project_images/calculator.png'
+import blog from '../assets/project_images/blog.jpg'
 
 const projectsJson = [  
     {
