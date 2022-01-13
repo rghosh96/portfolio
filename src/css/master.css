@@ -25,3 +25,8 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.project-types {
+  display: flex;
+  justify-content: space-between;
+}

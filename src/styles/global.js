@@ -228,6 +228,50 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.accent}!important;
     width: 0%;
   }
+
+  .card {
+    border: none !important;
+    border-radius: 20px;
+    margin: 30px;
+    background-color: ${({ theme }) => theme.bg} !important;
+    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+  }
+
+  .card-title {
+    font-family: ${({ theme }) => theme.sansSerif};
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+
+  .card-footer {
+    display: flex;
+    border-color: ${({ theme }) => theme.accent} !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-footer p {
+    font-size: 13px !important;
+    margin-right: 7px;
+    color: ${({ theme }) => theme.text} !important;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 20vh !important;
+    object-fit: cover !important;
+}
   
   .btn-link {
     width: 75px !important;
@@ -477,6 +521,10 @@ stroke-width: 21 !important;
 
     .section-container {
       width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
     }
 
     .profile-image {
