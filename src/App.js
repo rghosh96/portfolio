@@ -9,7 +9,7 @@ import './css/master.css';
 import ToggleSwitch from './components/Toggle';
 import ResumePage from './components/Resume';
 import ParallaxPage from './components/Parallax';
-import AllProjectsPage from './components/project pages/AllProjects';
+import AllProjectsPage from './components/project_pages/AllProjects';
 
 function App(props) {
   // check if persisting theme exists, set to last theme; else light is default
