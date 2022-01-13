@@ -59,11 +59,8 @@ const Projects = (props) => {
               />
             </Link>
 
-            <Button 
-            variant="generic"
-            href="/allprojects" 
-             rel="noopener noreferrer">
-            all projects...</Button>
+            <Link to="/allprojects">
+            <Button variant="generic">all projects...</Button></Link>
           </div>
           
           <br></br>
