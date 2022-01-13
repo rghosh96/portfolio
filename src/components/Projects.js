@@ -27,37 +27,37 @@ const Projects = (props) => {
             <br></br>
 
           <div class="project-types">
-            <a className="project-icon" href="/allprojects" rel="noopener noreferrer">
+            <Link to="/allprojects" >
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faMobileAlt} 
                 size='4x'
               />
-            </a>
+            </Link>
 
-            <a className="project-icon" href="/allprojects" rel="noopener noreferrer">
+            <Link to="/allprojects" >
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faReact} 
                 size='4x'
               />
-            </a>
+            </Link>
 
-            <a className="project-icon" href="/allprojects" rel="noopener noreferrer">
+            <Link to="/allprojects">
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faLaptopCode} 
                 size='4x'
               />
-            </a>
+            </Link>
 
-            <a className="project-icon" href="/allprojects" rel="noopener noreferrer">
+            <Link to="/allprojects" >
               <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faFigma} 
                 size='4x'
               />
-            </a>
+            </Link>
 
             <Button 
             variant="generic"
