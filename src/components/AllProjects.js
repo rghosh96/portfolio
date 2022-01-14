@@ -64,7 +64,11 @@ const AllProjects = (props) => {
           <Card>
             <Card.Img variant="top" src={project.image}  />
             <Card.Body>
-              <Card.Title>{project.title}</Card.Title>
+              <Card.Title>
+                <a target="_blank" rel="noopener noreferrer" href={project.url}>
+                  {project.title}
+                </a>
+              </Card.Title>
               <Card.Text>
                 {project.description}
               </Card.Text>

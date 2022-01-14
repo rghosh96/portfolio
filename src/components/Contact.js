@@ -18,8 +18,8 @@ const Contact = (props) => {
           <Diamond className="diamond2"></Diamond>
         </div>
         <h2>contact</h2>
-        <div className="center">
-        <p>questions? comments? pls to reach out! i'll respond within a couple of days (:</p>
+        <div className="contact-text">
+          <p>questions? comments? pls to reach out! i'll respond within a couple of days (:</p>
         </div>
         <br/>      
         <a href="mailto:rashighosh96@gmail.com">

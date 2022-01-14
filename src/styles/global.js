@@ -25,6 +25,12 @@ export const GlobalStyles = createGlobalStyle`
 
   a:hover {
     text-decoration: none !important;
+    color: ${({ theme }) => theme.accentDark} !important;
+  }
+
+  a {
+    color: ${({ theme }) => theme.accent} !important;
+    transition: .2s ease-in-out;
   }
   .navigation {
     position: fixed;
@@ -236,6 +242,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.bg} !important;
     box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+    transition: .2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card-title {
