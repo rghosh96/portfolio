@@ -8,6 +8,8 @@ import blog from '../assets/project_images/blog.jpg'
 import qc from '../assets/project_images/qc.png'
 import studyspots from '../assets/project_images/studyspots.png'
 import figma from '../assets/project_images/figma.png'
+import filesystem from '../assets/project_images/filesystem.png'
+import odbc from '../assets/project_images/odbc.png'
 
 const projectsJson = [  
     {
@@ -99,6 +101,24 @@ const projectsJson = [
         "tags": ["react", "redux", "firebase", "firestore", "heroku", "google places api", "google popular times api", "database", "javascript", "website", "html", "css"],
         "features": ["search places", "sort places", "favorite places"],
         "image": studyspots
+    },
+    {
+        "title":"File-Based Database System", 
+        "url": "https://github.com/rghosh96/File-Based-Database",
+        "description": "file-based database system implemented in C++",
+        "group-project": false,
+        "tags": ["c++", "file system", "database", "merge sort", "binary search"],
+        "features": ["merge sort", "binary search"],
+        "image": filesystem
+    },
+    {
+        "title":"ODBC SQL Database", 
+        "url": "https://github.com/rghosh96/ODBC-Sql-DB",
+        "description": "sql database ran from command line interface (implemented in c++)",
+        "group-project": false,
+        "tags": ["c++", "sql", "database", "odbc", "command line"],
+        "features": ["command line database"],
+        "image": odbc
     }
 
 ]  
