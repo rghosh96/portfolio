@@ -19,7 +19,7 @@ const Contact = (props) => {
         </div>
         <h2>contact</h2>
         <div className="contact-text">
-          <p>questions? comments? pls to reach out! i'll respond within a couple of days (:</p>
+          <p>Want to connect? Have questions? Comments? Please reach out! I'll respond within a couple of days (:</p>
         </div>
         <br/>      
         <a href="mailto:rashighosh96@gmail.com">

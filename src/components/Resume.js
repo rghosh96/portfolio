@@ -51,7 +51,8 @@ const Resume = (props) => {
       </div>
       <h2>resume</h2>
       <div className="center">
-        <h4>View PDF Version of Resume <span> <a class="links" href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
+        <h4>Updated Dec 16, 2022</h4>
+        <h4>View PDF Version of CV <span> <a class="links" href={ResumePDF} target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
       </div>
       <hr />
       <div className="info"><h3>grad (current): &nbsp; </h3> <p>university of florida, gainesville, fl</p></div>
@@ -183,10 +184,15 @@ const Resume = (props) => {
           </Col>
 
           <Col>
-            <h3>phD courses:</h3>
+            <h3>phD/grad school courses:</h3>
             <ul>
               <li>ux design</li>
+              <li>human computer interaction</li>
+              <li>research methods</li>
+              <li>community based participatory research</li>
               <li>spoken dialogue systems</li>
+              <li>computer networks</li>
+              <li>data structures</li>
             </ul>
           </Col>
         </Row>

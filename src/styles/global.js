@@ -137,6 +137,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.accent};
     font-size: 11px;
     margin-bottom: 0px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   h4 {

@@ -22,26 +22,30 @@ const Research = (props) => {
         <img className="profile-image" src={uf} alt="loading..." />
       </div>
                 <div>
-                <p>i'm a 1st year 
-                <a class="links" href="https://en.wikipedia.org/wiki/Human-centered_computing" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> human-centered-computing</a> phD student at the 
-                university of florida in the
-                <a class="links" href="https://www.cise.ufl.edu/" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> computer & information science & engineering </a> 
-                department. i'm part of the 
-                <a class="links" href="https://verg.cise.ufl.edu" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Virtual Experiences Research Group (VERG)</a> lab.
+                <p>I'm a 2nd year 
+                <a class="links" href="https://en.wikipedia.org/wiki/Human-centered_computing" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Human-Centered Computing</a> phD student at the 
+                University of Florida in the
+                <a class="links" href="https://www.cise.ufl.edu/" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Computer & Information Science & Engineering </a> 
+                Department. I'm part of the 
+                <a class="links" href="https://verg.cise.ufl.edu" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Virtual Experiences Research Group (VERG)</a> Lab.
                 </p>
 
 <br/>
             <h3>research interests:</h3>
-            <p>mental health, preventative healthcare initiatives, & leveraging virtual human 
-                technology to address gaps & barriers
+            <p>Healthcare, Addressing barriers/gaps with tech, Empowering marginalized communities with tech, Gender in virtual humans
             </p>
-            
+            <br/>
             <h3>current project(s):</h3>
+            <p>♡ Colorectal Cancer Project to promote CRC screening among racial/ethnic minority & rural patients - 
             <a class="links" href="https://jou.ufl.edu/alex" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Meet ALEX</a>
-            <p>(colorectal cancer project, or CRC)</p>
-        
+            </p>
+            <p>♡ Clinical Trials Project to educate on clinical trials & provide relevant, tailored clinical trial information</p>
+            <br/>
             <h3>publications:</h3>
-            <p>stay tuned! someday... (,:</p>
+            <p>I'm still early in the journey, but you can visit my Google Scholar page
+            <a class="links" href="https://scholar.google.com/citations?user=w2AnUOcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> here </a>
+                 :)
+            </p>
                 </div>
                 </div>
         </div>

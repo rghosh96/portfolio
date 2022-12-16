@@ -21,7 +21,7 @@ const Projects = (props) => {
         <br/>
         <div className="projects-section">
           <div style={{textAlign: 'center'}}>
-            <p>i have a few projects in different areas, different areas, and different softwares.
+            <p>I have a few projects in different areas, different areas, and different softwares.
             </p>
 
             <br></br>
@@ -60,13 +60,13 @@ const Projects = (props) => {
             </Link>
 
             <Link to="/allprojects">
-            <Button variant="generic">all projects...</Button></Link>
+            <Button variant="generic">All Projects...</Button></Link>
           </div>
           
           <br></br>
           <br></br>
 
-          <p>you can also go check out my github:</p>
+          <p>You can also go check out my GitHub:</p>
           <a href="https://github.com/rghosh96" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               color={props.theme.accent}
@@ -77,13 +77,13 @@ const Projects = (props) => {
           <br></br>
           <br></br>
 
-          <p>also, check out my vscode themes! or feel free to suggest one for me (:</p>
+          <p>Also, check out my vscode themes! Or feel free to suggest one for me (:</p>
           <Button 
             variant="generic"
             href="https://marketplace.visualstudio.com/publishers/Shira" 
             target="_blank"
              rel="noopener noreferrer">
-            my vscode themes</Button>
+            My VS Code Themes</Button>
         </div>
         </div>
       </div>

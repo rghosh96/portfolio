@@ -28,12 +28,16 @@ const About = (props) => {
       </div>
       <div>
       <h7>hello, i'm rashi!</h7>
-      <p>i'm a libra, an enneagram type IV (individualist), and my creative type is a dreamer. i love web development and doing my
-        nails (i make my own press-ons). my fav fonts are currently montserrat, quicksand, and spartan!
+      <p>I'm a Libra, an Enneagram Type IV (Individualist), and my creative type is a dreamer. I love web development and doing my
+        nails (I make my own press-ons). My favorite font is currently poppins!
       </p>
-      <p>i'm also currently a first year phD student in Human Centered Computing at University of Florida. i got my bachelor's in computer science,
+      <p>I'm also currently a second year phD student in Human Centered Computing at University of Florida. I am a member of the 
+        Virtual Experiences Research Group (VERG) Lab. 
+      </p>
+      <p>I got my Bachelor's in Computer Science at University of Arkansas,
         & have industry experience from working briefly at a healthcare information technology company.
       </p>
+      
       </div>
     </div>
     <Link to="/resume">
