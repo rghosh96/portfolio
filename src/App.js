@@ -13,7 +13,7 @@ import AllProjectsPage from './components/AllProjects';
 
 function App(props) {
   // check if persisting theme exists, set to last theme; else light is default
-  let siteTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
+  let siteTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark'
   const [theme, setTheme] = useState(siteTheme);
 
 // The function that toggles between themes

@@ -241,7 +241,7 @@ const ParallaxTest = (props) => {
           </div>
 
           <div class="description">
-            <p className="subtitle">phD student | developer</p>
+            <p className="subtitle">phD student | developer | she/her/hers</p>
             <hr />
           </div>
           <div className="nav">
