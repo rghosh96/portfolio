@@ -1,5 +1,7 @@
 import '../index.css'
 import '../CSS/App.css';
+import '../CSS/Diamond.css';
+import { ReactComponent as Diamond } from '../assets/diamond.svg'
 import ThemeToggle from './ThemeToggle';
 import { ReactComponent as Name } from '../assets/name.svg'
 
@@ -15,6 +17,12 @@ function App() {
         <h3>projects</h3>
         <h3>connect</h3>
       </div>
+
+      <span>
+        <Diamond className="diamond"></Diamond>
+        <Diamond className="diamond"></Diamond>
+        <Diamond className="diamond"></Diamond>
+      </span>
 
       <span className="title">
         <h1>rashi ghosh</h1>

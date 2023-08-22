@@ -58,7 +58,7 @@ code {
 }
 
 h1, h2, h3 {
-  font-family: var(--Garamond);
+  font-family: var(--Garamond) !important;
   font-weight: 700;
 }
 
@@ -70,7 +70,7 @@ h3 {
 }
 
 p {
-  font-family: var(--Garamond) !important;
+  font-family: var(--Poppins) !important;
   font-size: 19px !important;
 }
 

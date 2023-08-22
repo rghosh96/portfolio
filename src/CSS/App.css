@@ -15,7 +15,7 @@
 .subtitle {
   /* position: fixed;
   bottom: 75px; */
-  font-family: var(--Garamond);
+  font-family: var(--Poppins);
   font-size: 25px;
   width: 55%;
   display: flex;
@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--Garamond);
+  font-family: 'EB Garamond', serif;
   text-transform: lowercase;
   letter-spacing: 1px;
   font-size: 21px !important;
@@ -61,11 +61,11 @@ h3 {
 }
 
 .logo path {
-  fill: var(--dark) !important;
+  fill: var(--pink) !important;
 }
 
 .logo:hover path {
-  fill: var(--pink) !important;
+  fill: var(--green) !important;
 }
 
 .logo:hover {
