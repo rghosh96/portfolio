@@ -1,39 +1,42 @@
 import '../index.css'
 import '../CSS/App.css';
-import '../CSS/Diamond.css';
-import { ReactComponent as Diamond } from '../assets/diamond.svg'
 import ThemeToggle from './ThemeToggle';
-import { ReactComponent as Name } from '../assets/name.svg'
+import { ReactComponent as Logo } from '../assets/Logo.svg'
 
 function App() {
   return (
     <div className="App">
       <ThemeToggle/>
 
-      <div class="navigation">
-        <h3>about</h3>
-        <h3>research</h3>
-        <Name className="logo"/>
-        <h3>projects</h3>
-        <h3>connect</h3>
+      <div className="navigation">
+        <p className="nav-item">about</p>
+        <p className="nav-item">research</p>
+        <Logo className="logo"/>
+        <p className="nav-item">projects</p>
+        <p className="nav-item">connect</p>
       </div>
 
-      <span>
-        <Diamond className="diamond"></Diamond>
-        <Diamond className="diamond"></Diamond>
-        <Diamond className="diamond"></Diamond>
-      </span>
+      <span className="title-area">
+        <Logo className="logo-title"/>
+        <h1 className="title">a</h1>
+        <h1 className="title">s</h1>
+        <h1 className="title">h</h1>
+        <h1 className="title">i &nbsp;</h1>
 
-      <span className="title">
-        <h1>rashi ghosh</h1>
-        <h2>| <em>RAAHH ∙ shee</em> |</h2>
+        <h1 className="title">g</h1>
+        <h1 className="title">h</h1>
+        <h1 className="title">o</h1>
+        <h1 className="title">s</h1>
+        <h1 className="title">h</h1>
       </span>
       
+      <hr/>
       
       <div className="subtitle">
-          <span>
+          <h2>| <em>RAAHH∙shee &nbsp; g-OH-sh</em> |</h2>
+          <h3>
             she/her <span style={{fontSize: 15}}>♡</span> phD student, human-centered computing <span style={{fontSize: 15}}>♡</span> software developer
-          </span>
+          </h3>
       </div>
      
     </div>

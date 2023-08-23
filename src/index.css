@@ -1,46 +1,43 @@
 :root {
-  --dark: #515151;
+  --dark: #6A6A6A;
   --light: #FFFCF8;
   --grey: #AFAFAF;
   --pink: #ECB3C1;
   --purple: #AF94AE;
   --green: #80A692;
   --gold: #ffd59d;
-  --bronze: #e29600;
-  --Poppins: 'Poppins', sans-serif;
+  --Quicksand: 'Quicksand', sans-serif;
   --Garamond: 'EB Garamond', serif;
 }
 
 /* DARK THEME */
 .dark-theme {
-  --primary: var(--dark);
+  --primary: var(--pink);
   --secondary: var(--light);
-  --accent: var(--gold);
-  --accent2: var(--pink);
-  --accent3: var(--bronze);
-  background-color: var(--dark);
-  color: var(--light);
-  --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+  --accent1: var(--green);
+  --accent2: var(--purple);
+  --accent3: var(--grey);
+  --background: var(--dark);  
 }
 
 .dark-theme hr {
-  border-color: var(--gold);
+  border-top: .5px solid var(--accent1);
+  margin: 0px;
 }
 
 /* LIGHT THEME */
 .light-theme {
-  --primary: var(--light);
+  --primary: var(--pink);
   --secondary: var(--dark);
-  --accent: var(--pink);
-  --accent2: var(--green);
-  --accent3: var(--purple);
-  background-color: var(--light);
-  color: var(--dark);
-  --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.576);
+  --accent1: var(--green);
+  --accent2: var(--purple);
+  --accent3: var(--grey);
+  --background: var(--light);  
 }
 
 .light-theme hr {
-  border-color: var(--pink);
+  border-top: .5px solid var(--accent1);
+  margin: 0px;
 }
 
 body {
@@ -50,6 +47,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background)
 }
 
 code {
@@ -57,21 +55,21 @@ code {
     monospace;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: var(--Garamond) !important;
   font-weight: 700;
+  color: var(--secondary);
 }
 
 h3 {
-  text-transform: uppercase;
-  font-size: 25px;
-  letter-spacing: 3px;
-  margin: 0px;
+  font-weight: 400;
+  color: var(--secondary);
 }
 
 p {
-  font-family: var(--Poppins) !important;
+  font-family: var(--Quicksand) !important;
   font-size: 19px !important;
+  color: var(--secondary)
 }
 
 hr {

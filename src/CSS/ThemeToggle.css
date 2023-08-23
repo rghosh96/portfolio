@@ -1,9 +1,9 @@
 .sun-icon {
-    color: var(--light);
+    color: var(--primary);
   }
 
   .moon-icon {
-    color: var(--dark);
+    color: var(--accent1);
   }
 
 .theme-switch {
@@ -33,7 +33,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--light); /* Changed the default slider color to match dark theme */
+    background-color: var(--primary); /* Changed the default slider color to match dark theme */
     transition: 0.4s;
     box-shadow: var(--box-shadow);
   }
@@ -45,17 +45,17 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--accent3);
+    background-color: var(--light);
     transition: 0.4s;
   }
   
   input:checked + .slider {
-    background-color: var(--dark); /* Changed the checked slider color to match light theme */
+    background-color: var(--accent1); /* Changed the checked slider color to match light theme */
   }
   
   input:checked + .slider:before {
     transform: translateX(26px);
-    background-color: var(--accent3);
+    background-color: var(--dark);
   }
   
   /* Rounded sliders */
