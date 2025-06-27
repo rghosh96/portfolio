@@ -5,7 +5,7 @@ import Spline from '@splinetool/react-spline';
 function App() {
   return (
     <div className="App">
-      <Spline className="spline" scene="https://prod.spline.design/sxHMKuNon-DYgy7M/scene.splinecode" />
+          <Spline class="spline" scene="https://prod.spline.design/lYEviCEWrds0Js92/scene.splinecode" />
     <div className="content">
        <div className="title">
           <h1>rashi ghosh</h1>
@@ -18,7 +18,6 @@ function App() {
           </div> 
         </div>
       </div>    
-          <div class="footer"></div>
     </div>
   );
 }
