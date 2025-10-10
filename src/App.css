@@ -190,3 +190,13 @@ button.modal-link {
     padding: 13px;
   }
 }
+
+.App {
+  height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  .App {
+    height: 100dvh;
+  }
+}
