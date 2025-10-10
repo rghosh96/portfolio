@@ -191,12 +191,12 @@ button.modal-link {
   }
 }
 
-.App {
-  height: 100vh;
-}
-
 @supports (height: 100dvh) {
   .App {
+    height: 100dvh;
+  }
+
+  .spline {
     height: 100dvh;
   }
 }
