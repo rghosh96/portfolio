@@ -178,6 +178,8 @@ button.modal-link {
   }
 
   .keywords-area {
+    position: absolute !important;
+    bottom: 5rem;
     width: auto;
     margin: 11px;
   }
