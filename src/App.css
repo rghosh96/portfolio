@@ -3,12 +3,11 @@ body {
   font-weight: 300;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  height: 10vh;
-  width: 100%;
-  background-color: #FFE5E5;
+hr {
+  background-image: linear-gradient(30deg, transparent, rgb(229, 105, 126), rgb(130, 150, 84), rgb(180, 139, 189), transparent);
+  border: 0;
+  height: 1px;
+  width: 75%;
 }
 
 .App {
@@ -27,18 +26,21 @@ body {
 }
 
 .content {
-  /* width: 100%;
-  height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 99999;
-  margin: 5rem;
+  margin: 1rem;
+  pointer-events: none;
 }
 
 .title {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title h1 {
@@ -51,11 +53,74 @@ body {
   margin-bottom: 5px;
 }
 
-.title h3 {
-  color: rgb(229, 105, 126);
+.description {
+  margin: 11px;
+}
+
+.description h2 {
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 2px;
+  margin: 1px;
+}
+
+.description p {
+  font-size: 19px;
+  margin: 0px;
+}
+
+h2.green {
+  color: rgb(130, 150, 84);
+}
+
+h2.pink {
+  color: rgb(229, 105, 126);
+}
+
+.heart {
+  font-size: 11px;
+}
+
+.keywords-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  margin: 11px;
+  font-size: 19px;
+}
+
+span.keywords-title {
+  /* font-family: "Lily Script One", system-ui;
+  color: #ffffff;
+  text-shadow: rgba(122, 46, 57, 0.9) 0 0 5px; */
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+span.colorful-gradient {
+  background: linear-gradient(30deg, rgb(229, 105, 126), rgb(180, 139, 189), rgb(130, 150, 84));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  pointer-events: auto;
+}
+
+span.colorful-gradient .link-icon {
+  color: rgb(130, 150, 84);
+  font-size: 13px;
+  transition: .3s ease-in-out;
+}
+
+span.colorful-gradient .link-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(229, 105, 126);
 }
 
 button {
@@ -63,49 +128,63 @@ button {
   margin: 11px;
   border-radius: 15px;
   border: 0px;
-  background-color: rgb(205, 163, 214);
+  /* background-color: rgb(205, 163, 214); */
+  background-image: linear-gradient(to right, rgb(187, 129, 200) 0%, rgb(216, 187, 223) 51%, rgb(205, 163, 214)  100%);
+  background-size: 200% auto;
   box-shadow: 7px 7px 15px 0px rgba(255, 255, 255, 0.672) inset, 7px 7px 15px 0px rgba(229, 105, 126, 0.431);
   transition: .2s ease-in-out;
   font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
   font-style: normal;
   color: white;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 15px;
+  pointer-events: auto;
 }
 
 button:hover {
   transform: scale(1.1);
   cursor: pointer;
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(255, 255, 255);
 }
 
-/* .menu {
-  display: flex;
-  flex-direction: row;
-} */
+
+button.modal-link {
+  background-image: linear-gradient(to right, rgb(156, 173, 117) 0%, rgb(204, 219, 168) 51%, rgb(156, 173, 117)  100%);
+}
+
+.menu {
+  margin: 11px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 480px) {
   .content {
-    margin: 3rem;
+    margin: 0px;
   }
 
   .title h1 {
     font-size: 45px;
   }
 
-  .title h3 {
+  .title h2 {
     font-size: 11px;
   }
 
-  button {
-    font-size: 9px;
-    margin: 7px;
+  .description p, .keywords-area {
+    font-size: 15px;
   }
 
-  /* .menu {
-    flex-direction: column;
-    align-items: center;
-  } */
+  .keywords-area {
+    width: auto;
+    margin: 11px;
+  }
+
+  button {
+    font-size: 13px;
+    margin: 3px;
+    padding: 13px;
+  }
 }
