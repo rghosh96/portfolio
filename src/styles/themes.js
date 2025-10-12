@@ -1,29 +1,34 @@
 export const lightTheme = {
   mode: 'light',
-  bg: '#e0e0e0',
-  text: '#525252',
-  lightShadow: '#FFFFFF',
-  darkShadow: '#949494',
-  accent: '#e0a100',
-  accentDark: '#b98500',
+  bg: '#ffd3e8ff',
+  text: '#2e4033ff',
+  lightShadow: '#f8e2ebff',
+  darkShadow: '#c394a9ff',
+  // accent: '#e0a100',
+  // accentDark: '#b98500',
+  accent: '#ed4779ff',
+  accent2: '#f4a9cdff',
+  accentDark: '#627d6bff',
+  accentDark2: '#4f3366ff',
 
-  cursive: '"La Belle Aurore", cursive',
-  sansSerif: '"Quicksand", sans-serif',
+  cursive: '"Lily Script One", system-ui',
+  sansSerif: '"Space Grotesk", sans-serif',
   code: '"Anonymous Pro", monospace',
-  bold: '"Spartan", sans-serif'
+  bold: '"Space Grotesk", sans-serif'
 }
   
   export const darkTheme = {
     mode: 'dark',
-    bg: '#363537',
+    bg: '#232323ff',
     text: '#FAFAFA',
     lightShadow: '#525252',
     darkShadow: '#000000',
     accent: '#ffc4d7',
-    accentDark: '#ff89af',
-
-    cursive: '"La Belle Aurore", cursive',
-    sansSerif: '"Quicksand", sans-serif',
+    accent2: '#454242ff',
+    accentDark: '#caeed6ff',
+    accentDark2: '#d5bee9ff',
+    cursive: '"Lily Script One", system-ui',
+    sansSerif: '"Space Grotesk", sans-serif',
     code: '"Anonymous Pro", monospace',
-    bold: '"Spartan", sans-serif'
+    bold: '"Space Grotesk", sans-serif'
   }

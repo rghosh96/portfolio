@@ -22,6 +22,8 @@ const Home = (props) => {
   const [research, setResearch] = useState(false);
   const [contact, setContact] = useState(false);
 
+  console.log("NOT PARALAX")
+
   useEffect(() => {
     function handleScroll() {
       console.log("scrolling")

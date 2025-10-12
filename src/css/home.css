@@ -16,6 +16,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.subtitle {
+  font-size: 25px;
+  margin-top: -21px;
+  text-align: right;
+}
+
+.descriptor {
+  font-size: 23px;
+  line-height: 1.5rem;
+}
+
+.spline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .home {
@@ -29,24 +50,15 @@
 }
 
 .nav {
-  margin: 15px 30px 30px 30px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 65%;
 }
 
-.description {
-  width: 505px;
-}
-
-.btn-link:hover {
-  transform: translateY(-7px);
-}
-
-.btn-link:hover .button-label {
-  opacity: 1;
-  margin-bottom: 15px !important;
+.description-area {
+  position:absolute;
+  left: 5%;
+  transform: translateY(7rem);
 }
 
 hr {
@@ -55,6 +67,12 @@ hr {
   -o-animation: lineDraw 2s;
   animation: lineDraw 2s;
   animation-fill-mode: forwards;
+}
+
+.header-area {
+  position: absolute;
+  right: 5%;
+  transform: translateY(-7rem);
 }
 
 .logo {
@@ -82,7 +100,7 @@ hr {
 
 @keyframes lineDraw {
   100% {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -110,5 +128,20 @@ hr {
 @keyframes rotate2 {
   100% {
     transform: rotateY(90deg);
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .title {
+    font-size: 55px !important;
+    text-align: right;
+  }
+
+  .header-area {
+    transform: translateY(-15rem);
+  }
+
+  .description-area {
+    transform: translateY(15rem);
   }
 }

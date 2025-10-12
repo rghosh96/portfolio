@@ -133,12 +133,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-family: ${({ theme }) => theme.bold};
+    font-family: ${({ theme }) => theme.cursive};
     color: ${({ theme }) => theme.accent};
-    font-size: 11px;
+    font-size: 23px;
     margin-bottom: 0px !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 
   h4 {
@@ -189,7 +187,7 @@ export const GlobalStyles = createGlobalStyle`
   
   p {
     font-family: ${({ theme }) => theme.sansSerif};
-    font-size: 17px;
+    font-size: 21px;
     margin-bottom: 5px !important;
   }
 
@@ -217,19 +215,22 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .title {
-    font-family: ${({ theme }) => theme.sansSerif};
-    color: ${({ theme }) => theme.accent};
-    text-transform: uppercase;
-    font-size: 27px;
+    color: #ffffff;
+    text-shadow: ${({ theme }) => theme.accent} 0 0 25px;
+    font-family: ${({ theme }) => theme.cursive};
+    font-size: 95px;
     z-index: 5;
     font-weight: 900px;
     margin-right: 5px;
     margin-left: 5px;
   }
 
-  .subtitle {
-    color: ${({ theme }) => theme.text};
-    text-align: center;
+  .rainbow-gradient {
+    background: linear-gradient(30deg, ${({ theme }) => theme.accent}, ${({ theme }) => theme.accentDark}, ${({ theme }) => theme.accentDark2});
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 500;
   }
 
   hr {
@@ -287,34 +288,42 @@ export const GlobalStyles = createGlobalStyle`
 }
   
   .btn-link {
-    width: 75px !important;
-    height: 75px !important;
-    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     padding: 15px !important;
-    margin: 20px !important;
+    text-decoration: none !important;
+    margin: 5px !important;
     border: none !important;
     border-radius: 25px !important;
     transition: 0.3s ease-in-out !important;
-    background: ${({ theme }) => theme.bg} !important;
-    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
-      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
-    height: 65px;
-    width: 65px;
-    &:focus {
-      box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
-      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
-    }
+    background-image: linear-gradient(to right, ${({ theme }) => theme.accent2} 0%, ${({ theme }) => theme.bg} 51%, ${({ theme }) => theme.accent2} 100%);
+    background-size: 200% auto;
+    // box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+    //   -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+    // &:focus {
+    //   box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+    //   -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+    // }
+    box-shadow: 7px 7px 15px 0px ${({ theme }) => theme.lightShadow} inset, 7px 7px 15px 0px ${({ theme }) => theme.darkShadow};
   }
+
+  .btn-link:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(255, 255, 255);
+}
 
   .button-label {
     font-family: ${({ theme }) => theme.bold};
     color: ${({ theme }) => theme.accent};
-    font-size: 9px;
-    opacity: 0;
+    font-size: 15px;
     transition: .3s ease-in;
     text-align: center;
-    max-height: 0px !important;
     margin: 0 !important;
+    font-weight: 700;
   }
 
   .profile-image {
@@ -514,10 +523,6 @@ stroke-width: 21 !important;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    .button-label {
-      opacity: 1 ;
     }
 
     h7 {

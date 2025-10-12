@@ -17,6 +17,10 @@
   border-radius: 45px;
 }
 
+.symbol {
+  font-size: 15px;
+}
+
 .home-section {
   position: relative;
   height: 100vh;
