@@ -3,7 +3,7 @@ import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
 import { ReactComponent as Diamond } from '../css/diamond.svg'
-import profile from '../assets/profile.gif'
+import profile from '../assets/profile.png'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const About = (props) => {
       </div>
       </div>
       <div>
-      <h3>Hello, I am Rashi!</h3>
+      <h3>hello, i am rashi!</h3>
       <p>i am currently a  <span className="rainbow-gradient">human-centered computing phd student</span> at the <span className="rainbow-gradient">university of florida</span> in 
         the <span className="rainbow-gradient">virtual experiences research group (VERG)</span>.
       </p>
@@ -30,8 +30,9 @@ const About = (props) => {
       </p>
       </div>
     </div>
-    {/* <Link to="/resume">
-    <Button variant="generic">check out my resume!</Button></Link> */}
+    <a href="https://docs.google.com/document/d/1slNW9CStbBQoJ1W5X51Wb60-7X84J8rLh6gPEpR48WI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <Button variant="generic">My CV</Button>
+    </a>
     </div>
   )
 }

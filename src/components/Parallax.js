@@ -378,8 +378,7 @@ const ParallaxTest = (props) => {
       </Parallax>
 
       <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
-        <div className="to-top" onClick={() => parallax.current.scrollTo(0)}><Diamond className="diamond-top"/>
-        <div className="diamond-top-text">top</div></div>
+          <div className="to-top" onClick={() => parallax.current.scrollTo(0)}>top⤴</div>
       </motion.div>
     </div>
   )

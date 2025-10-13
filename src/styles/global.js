@@ -25,13 +25,25 @@ export const GlobalStyles = createGlobalStyle`
 
   a:hover {
     text-decoration: none !important;
-    color: ${({ theme }) => theme.accentDark} !important;
   }
 
-  a {
-    color: ${({ theme }) => theme.accent} !important;
+  .contact-row p:hover, a:hover {
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 2px;
+  } 
+
+  .contact-row p, a {
+    background: linear-gradient(30deg, ${({ theme }) => theme.accent}, ${({ theme }) => theme.accentDark}, ${({ theme }) => theme.accentDark2});
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
     transition: .2s ease-in-out;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 !important;
   }
+
   .navigation {
     position: fixed;
     width: 100%;
@@ -113,7 +125,10 @@ export const GlobalStyles = createGlobalStyle`
     align-items: center;
     cursor: pointer;
     transform: scale(1.1);
-    transition: .2s ease-in-out
+    transition: .2s ease-in-out;
+    color: ${({ theme }) => theme.accent};
+    font-weight: 700;
+    letter-spacing: -1px;
   }
 
   .to-top:hover {
@@ -324,16 +339,15 @@ export const GlobalStyles = createGlobalStyle`
     text-align: center;
     margin: 0 !important;
     font-weight: 700;
+    letter-spacing: 1.5px;
   }
 
   .profile-image {
     width: 250px; 
-    height: 250px; 
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 55px;
-    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
-      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+  }
+
+   .research-image {
+    width: 450px; 
   }
 
   .btn-primary {
@@ -355,7 +369,8 @@ export const GlobalStyles = createGlobalStyle`
       -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
     margin: 15px;
     font-family: ${({ theme }) => theme.bold};
-    font-size: 11px;
+    font-size: 15px;
+    font-weight: 700;
     padding: 11px;
     border-radius: 11px;
     transition: .2s ease-in-out;
@@ -436,18 +451,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .social-media {
-    transition: .3s ease-in-out;
-    margin: 5px;
-  }
-
-  .social-media:hover {
-    transform: scale(1.1);
-  }
-
-  .social-media-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 0;
   }
 
 .diamond-top {
@@ -457,15 +461,6 @@ export const GlobalStyles = createGlobalStyle`
 .diamond-top path {
   fill: ${({ theme }) => theme.accent} !important;
   stroke: none !important;
-}
-
-.diamond-top-text {
-  color: ${({ theme }) => theme.bg} !important;
-  position: absolute;
-  text-align: center;
-  transform: translateY(15px);
-  font-family: ${({ theme }) => theme.bold};
-  font-size: 11px;
 }
 
 .diamond {
@@ -525,12 +520,20 @@ stroke-width: 21 !important;
       align-items: center;
     }
 
+    .descriptor {
+      font-size: 19px;
+    }
+
+    .button-label {
+      font-size: 11px;
+    }
+
     h7 {
       font-size: 19px;
     }
 
     p {
-      font-size: 15px;
+      font-size: 17px;
     }
 
     h2 {
@@ -546,10 +549,13 @@ stroke-width: 21 !important;
     }
 
     .profile-image {
-      width: 100px;
-      height: 100px;
+      width: 150px;
       margin-right: 0;
-      margin-bottom: 17px !important;
+    }
+
+    .research-image {
+      width: 250px;
+      margin-right: 0;
     }
   }
 
