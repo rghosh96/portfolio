@@ -5,24 +5,25 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 
 const ToggleContainer = styled.button`
-  background: ${({ theme }) => theme.bg};
-  border: none;
-  box-shadow: 8px 8px 12px 0 ${({ theme }) => theme.darkShadow},
-      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
-  border-radius: 30px;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  padding: 13px;
-  top: 20px;
-  font-size: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  width: 80px;
-  height: 40px;
-  z-index: 1000;
+  {
+    background: ${({ theme }) => theme.bg};
+    border: none;
+    box-shadow: 8px 8px 12px 0 ${({ theme }) => theme.darkShadow},
+        -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    padding: 13px;
+    top: 20px;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 80px;
+    height: 40px;
+    z-index: 1000;
     
     // sun icon
     .light {
@@ -32,6 +33,12 @@ const ToggleContainer = styled.button`
     // moon icon
     .dark {
       transform: ${({ theme }) => theme.mode === 'light' ? 'translateY(-100px)' : 'translateY(0)'};
+    }
+
+    @media only screen and (max-width: 655px) {
+      top: 10px;
+      right: 5px;
+      }
     }
   }
 `;
