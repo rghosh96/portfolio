@@ -33,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: 2px;
   } 
 
-  .contact-row p, a {
+  .contact-row p, .contact-row a {
     background: linear-gradient(30deg, ${({ theme }) => theme.accent}, ${({ theme }) => theme.accentDark}, ${({ theme }) => theme.accentDark2});
     background-clip: text;
     -webkit-background-clip: text;
@@ -46,18 +46,20 @@ export const GlobalStyles = createGlobalStyle`
 
   .navigation {
     position: fixed;
-    width: 100%;
-    padding-top: 20px;
-    height: 75px;
-    border-bottom: 1px solid ${({ theme }) => theme.accent};
     margin: auto; 
-    left: 0;
-    right: 0;
-    top: 0;
+    left: 20px;
+    top: 20px;
+    padding-bottom: 5px;
+    gap: 15px;
     display: flex;
     justify-content: center;
-    background-color: ${({ theme }) => theme.bg} !important;
     z-index: 99999;
+    padding: 15px;
+    border-radius: 15px;
+    transition: .2s ease-in-out;
+    background-color: ${({ theme }) => theme.bg} !important;
+    box-shadow: 12px 12px 16px 0 ${({ theme }) => theme.darkShadow},
+      -5px -3px 16px 0 ${({ theme }) => theme.lightShadow};
   }
 
   .navLine {
@@ -69,8 +71,6 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     align-items: center;
     transition: .2s ease-in-out;
-    margin-right: 15px;
-    margin-left: 15px;
     cursor: pointer;
   }
   
@@ -85,20 +85,26 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text} !important;
     opacity: 0;
     height: 0;
-    margin: 0;
+    margin: 0 !important;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden; /* prevents text overflow during collapse */
   }
   .navItem:hover .navLink {
     text-decoration: none !important;
     color: ${({ theme }) => theme.accent} !important;
     opacity: 1;
     height: 100%;
-    margin: 0;
+    margin: 0 !important;
+    max-height: 30px; /* or a value that fits your link height */
   }
   .dot {
     height: 5px;
     width: 5px;
+    transition: .2s ease-in-out;
     background-color: ${({ theme }) => theme.accent} !important;
     border-radius: 50%;
+    margin-top: 3px;
   }
 
   .navItem:hover .dot {
@@ -520,8 +526,17 @@ stroke-width: 21 !important;
       align-items: center;
     }
 
+    .btn-link {
+      padding: 9px !important;
+      flex-direction: row;
+    }
+
     .descriptor {
       font-size: 19px;
+    }
+
+    .navItem .navLink {
+      display: none;
     }
 
     .button-label {
@@ -532,12 +547,38 @@ stroke-width: 21 !important;
       font-size: 17px;
     }
 
-    p {
+    p, a {
       font-size: 15px;
     }
 
     h2 {
       font-size: 33px;
+    }
+
+    .navigation {
+      right: auto;
+      gap: 15px;
+      left: 5px;
+      top: 10px;
+      flex-direction: column;
+    }
+
+    hr {
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+
+    h3 {
+      font-size: 19px;
+    }
+
+    .nav {
+      margin-top: 0;
+    }
+
+    .krsnIA {
+      top: 10px;
+      right: 5px;
     }
 
     .section-container {

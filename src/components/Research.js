@@ -3,12 +3,20 @@ import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
 import uf from '../assets/research.png'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 const Research = (props) => {
     return (
         <div className="home-section" >
+            <div class="section-heading">
+            <FontAwesomeIcon
+                color={props.theme.accent}
+                icon={faBookOpen}
+                size='lg'
+                />
             <h2>research</h2>
+            </div>
             <br/>
             <div className="research-section">
                 <div>
@@ -16,12 +24,10 @@ const Research = (props) => {
                         using <span className="rainbow-gradient">virtual humans/embodied conversational agents</span> to connect people 
                         to <span className="rainbow-gradient">healthcare resources</span>.
                     </p>
-                    <br/>
                     <h3>Research Interests:</h3>
                     <p>
                     virtual humans, embodied conversational agents, conversational AI systems, healthcare interventions, equitable health outcomes
                     </p>
-                    <br/>
                     {/* <h3>Project(s):</h3>
                     <p><span className="symbol">♥</span>  [Past] Colorectal Cancer Project to promote CRC screening among racial/ethnic minority & rural patients - 
                     <a class="links" href="https://jou.ufl.edu/alex" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Meet ALEX</a>

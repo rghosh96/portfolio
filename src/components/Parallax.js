@@ -4,7 +4,7 @@ import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faCode, faEnvelope, faBookOpen } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faPaperPlane, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import Button from 'react-bootstrap/Button';
@@ -132,9 +132,9 @@ const ParallaxTest = (props) => {
         break;
       case "research":
         parallax.current.scrollTo(2)
-        setProjects(true);
+        setProjects(false);
         setAbout(false);
-        setResearch(false);
+        setResearch(true);
         setContact(false);
         break;
       case "contact":
@@ -159,10 +159,9 @@ const ParallaxTest = (props) => {
           <FontAwesomeIcon
             color={props.theme.accent}
             icon={faUser}
-            size='lg'
           />
           <p className="navLink">About</p>
-          {about ? <div class="dot"/> : <div/>}
+          {/* {about ? <div class="dot"/> : <div/>} */}
         </Link>
 {/* 
         <Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
@@ -179,20 +178,18 @@ const ParallaxTest = (props) => {
           <FontAwesomeIcon
               color={props.theme.accent}
               icon={faBookOpen}
-              size='lg'
             />
           <p className="navLink">Research</p>
-          {research ? <div class="dot"/> : <div/>}
+          {/* {research ? <div class="dot"/> : <div/>} */}
         </Link>
 
         <Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
           <FontAwesomeIcon
               color={props.theme.accent}
-              icon={faEnvelope}
-              size='lg'
+              icon={faPaperPlane}
             />
           <p className="navLink">Connect</p>
-          {contact ? <div class="dot"/> : <div/>}
+          {/* {contact ? <div class="dot"/> : <div/>} */}
         </Link>
       </div>
     </motion.div>
@@ -320,7 +317,7 @@ const ParallaxTest = (props) => {
               <Button variant="link">
                 <FontAwesomeIcon
                   color={props.theme.accent}
-                  icon={faEnvelope}
+                  icon={faPaperPlane}
                   size='lg'
                 />
                 <p class="button-label">connect</p>

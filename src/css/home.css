@@ -138,10 +138,10 @@ hr {
   }
 
   .header-area {
-    transform: translateY(-15rem);
+    transform: translateY(-13rem);
   }
 
   .description-area {
-    transform: translateY(15rem);
+    transform: translateY(13rem);
   }
 }

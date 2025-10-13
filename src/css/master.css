@@ -21,6 +21,13 @@
   font-size: 15px;
 }
 
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .home-section {
   position: relative;
   height: 100vh;

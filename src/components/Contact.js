@@ -4,7 +4,7 @@ import '../css/master.css';
 import '../css/contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { withTheme } from 'styled-components'
 import connect from '../assets/connect.png'
 
@@ -24,7 +24,14 @@ const Contact = (props) => {
 
     return (
       <div className="home-section">
-        <h2>connect</h2>
+         <div class="section-heading">
+          <FontAwesomeIcon
+              color={props.theme.accent}
+              icon={faPaperPlane}
+              size='lg'
+            />
+          <h2>connect</h2>
+        </div>
         <div className="contact-text">
           <p>Want to connect? Please reach out to me using one of the methods below!</p>
         </div>

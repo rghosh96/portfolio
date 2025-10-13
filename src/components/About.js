@@ -2,16 +2,23 @@ import React from 'react'
 import '../css/about.css';
 import '../css/master.css';
 import { withTheme } from 'styled-components'
-import { ReactComponent as Diamond } from '../css/diamond.svg'
 import profile from '../assets/profile.png'
 import { Button } from 'react-bootstrap'
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser} from '@fortawesome/free-solid-svg-icons'
 
 
 const About = (props) => {
   return (
     <div className="home-section">
-      <h2>about</h2>
+      <div class="section-heading">
+        <FontAwesomeIcon
+            color={props.theme.accent}
+            icon={faUser}
+            size='lg'
+          />
+        <h2>about</h2>
+      </div>
       <br/>
       <div className="about-section">
         <div>
