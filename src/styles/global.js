@@ -529,11 +529,11 @@ stroke-width: 21 !important;
     }
 
     h7 {
-      font-size: 19px;
+      font-size: 17px;
     }
 
     p {
-      font-size: 17px;
+      font-size: 15px;
     }
 
     h2 {
