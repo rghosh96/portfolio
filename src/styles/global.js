@@ -531,6 +531,10 @@ stroke-width: 21 !important;
       flex-direction: row;
     }
 
+    .btn-generic {
+      margin: 7px;
+    }
+
     .descriptor {
       font-size: 19px;
     }
@@ -574,11 +578,6 @@ stroke-width: 21 !important;
 
     .nav {
       margin-top: 0;
-    }
-
-    .krsnIA {
-      top: 10px;
-      right: 5px;
     }
 
     .section-container {
