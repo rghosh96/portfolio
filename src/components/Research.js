@@ -9,7 +9,7 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 const Research = (props) => {
     return (
         <div className="home-section" >
-            <div class="section-heading">
+            <div className="section-heading">
             <FontAwesomeIcon
                 color={props.theme.accent}
                 icon={faBookOpen}
@@ -30,13 +30,13 @@ const Research = (props) => {
                     </p>
                     {/* <h3>Project(s):</h3>
                     <p><span className="symbol">♥</span>  [Past] Colorectal Cancer Project to promote CRC screening among racial/ethnic minority & rural patients - 
-                    <a class="links" href="https://jou.ufl.edu/alex" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Meet ALEX</a>
+                    <a className="links" href="https://jou.ufl.edu/alex" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> Meet ALEX</a>
                     </p>
                     <p><span className="symbol">♥</span> Clinical Trials Project to educate on clinical trials & provide relevant, tailored clinical trial information to underrepresented populations</p>
                     <br/> */}
                     <h3>Publications:</h3>
                     <p>Check out my Google Scholar page
-                    <a class="links" href="https://scholar.google.com/citations?user=w2AnUOcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> here</a>!
+                    <a className="links" href="https://scholar.google.com/citations?user=w2AnUOcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}> here</a>!
                     </p>
                 </div>
                 <div className="image-container">

@@ -55,7 +55,7 @@ const AllProjects = (props) => {
       <h2>all projects</h2>
       <div className="center">
         <h4>Currently a work in progress!</h4>
-        <h4>For more, visit my Github <span> <a class="links" href="https://github.com/rghosh96" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
+        <h4>For more, visit my Github <span> <a className="links" href="https://github.com/rghosh96" target="_blank" rel="noopener noreferrer" style={{ color: props.theme.accent }}>here</a></span></h4>
       </div>
       <hr />
 

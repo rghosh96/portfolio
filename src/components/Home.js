@@ -71,7 +71,7 @@ const Home = (props) => {
   }
 
   return (
-    <div class="main">
+    <div className="main">
       <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
       <div className="navigation">
 
@@ -82,7 +82,7 @@ const Home = (props) => {
     size='1x'
   />
   <p className="navLink">About</p>
-  {about ? <div class="dot"/> : <div/>}
+  {about ? <div className="dot"/> : <div/>}
 
 </Link>
 
@@ -93,7 +93,7 @@ const Home = (props) => {
     size='1x'
   />
 <p className="navLink">Projects</p>
-{projects ? <div class="dot"/> : <div/>}
+{projects ? <div className="dot"/> : <div/>}
 
 </Link>
 
@@ -104,7 +104,7 @@ const Home = (props) => {
     size='1x'
   />
 <p className="navLink">Research</p>
-{research ? <div class="dot"/> : <div/>}
+{research ? <div className="dot"/> : <div/>}
 
 </Link>
 
@@ -115,7 +115,7 @@ const Home = (props) => {
     size='1x'
   />
 <p className="navLink">Contact</p>
-{contact ? <div class="dot"/> : <div/>}
+{contact ? <div className="dot"/> : <div/>}
 
 </Link>
 
@@ -161,7 +161,7 @@ const Home = (props) => {
                 icon={faUserCircle}
                 size='2x'
               />
-              <p class="button-label">about</p>
+              <p className="button-label">about</p>
             </Button></Link>
 
             <Link to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
@@ -171,7 +171,7 @@ const Home = (props) => {
                 icon={faCode}
                 size='2x'
               />
-              <p class="button-label">projects</p>
+              <p className="button-label">projects</p>
             </Button></Link>
 
             <Link to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
@@ -181,7 +181,7 @@ const Home = (props) => {
                 icon={faBookOpen}
                 size='2x'
               />
-              <p class="button-label">research</p>
+              <p className="button-label">research</p>
             </Button></Link>
 
           
@@ -193,7 +193,7 @@ const Home = (props) => {
                 icon={faEnvelope}
                 size='2x'
               />
-              <p class="button-label">contact</p>
+              <p className="button-label">contact</p>
             </Button></Link>
         </div>
 
@@ -202,10 +202,10 @@ const Home = (props) => {
         </div>
         
     </div>
-    <div class="sectionAbout"><AboutSection/></div>
-    <div class="sectionProjects"><ProjectsPage/></div>
-    <div class="sectionResearch"><ResearchPage/></div>
-    <div class="sectionContact"><ContactPage/></div>
+    <div className="sectionAbout"><AboutSection/></div>
+    <div className="sectionProjects"><ProjectsPage/></div>
+    <div className="sectionResearch"><ResearchPage/></div>
+    <div className="sectionContact"><ContactPage/></div>
 
     <motion.div animate={{opacity: showNav? 1 : 0}} initial={{opacity: 0}}>
     <div className="to-top" onClick={() => scroll.scrollToTop()}><Diamond className="diamond-top"/>

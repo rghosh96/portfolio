@@ -26,7 +26,7 @@ const Projects = (props) => {
 
             <br></br>
 
-          <div class="project-types">
+          <div className="project-types">
             <Link to="/allprojects" >
               <FontAwesomeIcon
                 color={props.theme.accent}

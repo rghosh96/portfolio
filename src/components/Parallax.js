@@ -2,16 +2,16 @@ import React, { useRef, useEffect, useState } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import '../css/about.css';
 import '../css/master.css';
+import cloud from '../assets/cloud.svg'
+import stars from '../assets/stars.svg'
 import { withTheme } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faPaperPlane, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import Button from 'react-bootstrap/Button';
-import { ReactComponent as Diamond } from '../css/diamond.svg'
 import AboutSection from './About';
 import ResearchPage from './Research';
-import ProjectsPage from './Projects';
 import ContactPage from './Contact';
 import Spline from '@splinetool/react-spline';
 
@@ -21,10 +21,6 @@ const ParallaxTest = (props) => {
 
   // showing nav/showing dot indicator for sections
   const [showNav, setShowNav] = useState(false);
-  const [about, setAbout] = useState(false);
-  const [projects, setProjects] = useState(false);
-  const [research, setResearch] = useState(false);
-  const [contact, setContact] = useState(false);
   const [splineLoaded, setSplineLoaded] = useState(false);
 
   console.log("THEME",props.theme.mode)
@@ -125,24 +121,12 @@ const ParallaxTest = (props) => {
     switch (link) {
       case "about":
         parallax.current.scrollTo(1)
-        setAbout(true);
-        setProjects(false);
-        setResearch(false);
-        setContact(false);
         break;
       case "research":
         parallax.current.scrollTo(2)
-        setProjects(false);
-        setAbout(false);
-        setResearch(true);
-        setContact(false);
         break;
       case "contact":
         parallax.current.scrollTo(3)
-        setContact(true)
-        setProjects(false);
-        setResearch(false);
-        setAbout(false);
         break;
       default:
         break;
@@ -161,7 +145,7 @@ const ParallaxTest = (props) => {
             icon={faUser}
           />
           <p className="navLink">About</p>
-          {/* {about ? <div class="dot"/> : <div/>} */}
+          {/* {about ? <div className="dot"/> : <div/>} */}
         </Link>
 {/* 
         <Link className="navItem" to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
@@ -171,7 +155,7 @@ const ParallaxTest = (props) => {
               size='lg'
             />
           <p className="navLink">Projects</p>
-          {projects ? <div class="dot"/> : <div/>}
+          {projects ? <div className="dot"/> : <div/>}
         </Link> */}
 
         <Link className="navItem" to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
@@ -180,7 +164,7 @@ const ParallaxTest = (props) => {
               icon={faBookOpen}
             />
           <p className="navLink">Research</p>
-          {/* {research ? <div class="dot"/> : <div/>} */}
+          {/* {research ? <div className="dot"/> : <div/>} */}
         </Link>
 
         <Link className="navItem" to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
@@ -189,7 +173,7 @@ const ParallaxTest = (props) => {
               icon={faPaperPlane}
             />
           <p className="navLink">Connect</p>
-          {/* {contact ? <div class="dot"/> : <div/>} */}
+          {/* {contact ? <div className="dot"/> : <div/>} */}
         </Link>
       </div>
     </motion.div>
@@ -204,58 +188,81 @@ const ParallaxTest = (props) => {
         offset={0}
         speed={.3}
         factor={5}
-        style={{
-          backgroundImage: url('stars', true),
-          backgroundSize: 'cover',
-        }}
       />
 
       <ParallaxLayer offset={0.1} speed={0.1} style={{ opacity: 0.3 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '15%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '5%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '71%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '25%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={0.75} speed={0.5} style={{ opacity: 0.1 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '35%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '85%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '15%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '15%', marginLeft: '35%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '15%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '5%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.3 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '25%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '85%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '15%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.1 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '55%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '35%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '15%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '75%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '35%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '55%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={2.6} speed={0.1} style={{ opacity: 0.3}}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '55%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '25%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={3} speed={0.2} style={{ opacity: 0.3 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '15%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '75%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '25%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '55%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={3.6} speed={-0.1} style={{ opacity: 0.2 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '1%', marginLeft: '15%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+        <img alt="" src={stars} style={{ display: 'block', width: '3%', marginLeft: '15%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={4} speed={0.2} style={{ opacity: 0.1 }}>
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer offset={4.75} speed={-0.1} style={{ opacity: 0.3 }}>
-        <img alt="" src={url('cloud')} style={{fill: 'white', display: 'block', width: '20%', marginLeft: '60%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-        <img alt="" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+        <img alt="" src={cloud} style={{fill: 'white', display: 'block', width: '20%', marginLeft: '60%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+        <img alt="" src={cloud} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
       </ParallaxLayer>
 
       <ParallaxLayer
@@ -290,7 +297,7 @@ const ParallaxTest = (props) => {
                   icon={faUser}
                   size='lg'
                 />
-                <p class="button-label">about</p>
+                <p className="button-label">about</p>
               </Button></Link>
 
               {/* <Link to="sectionProjects" smooth={true} duration={1000} onClick={() => linkClicked("projects")}>
@@ -300,7 +307,7 @@ const ParallaxTest = (props) => {
                   icon={faCode}
                   size='lg'
                 />
-                <p class="button-label">projects</p>
+                <p className="button-label">projects</p>
               </Button></Link> */}
 
               <Link to="sectionResearch" smooth={true} duration={1000} onClick={() => linkClicked("research")}>
@@ -310,7 +317,7 @@ const ParallaxTest = (props) => {
                   icon={faBookOpen}
                   size='lg'
                 />
-                <p class="button-label">research</p>
+                <p className="button-label">research</p>
               </Button></Link>
 
               <Link to="sectionContact" smooth={true} duration={1000} onClick={() => linkClicked("contact")}>
@@ -320,7 +327,7 @@ const ParallaxTest = (props) => {
                   icon={faPaperPlane}
                   size='lg'
                 />
-                <p class="button-label">connect</p>
+                <p className="button-label">connect</p>
               </Button></Link>
             </div>
           </div>

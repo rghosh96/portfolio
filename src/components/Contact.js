@@ -24,7 +24,7 @@ const Contact = (props) => {
 
     return (
       <div className="home-section">
-         <div class="section-heading">
+         <div className="section-heading">
           <FontAwesomeIcon
               color={props.theme.accent}
               icon={faPaperPlane}

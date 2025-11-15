@@ -11,7 +11,7 @@ import { faUser} from '@fortawesome/free-solid-svg-icons'
 const About = (props) => {
   return (
     <div className="home-section">
-      <div class="section-heading">
+      <div className="section-heading">
         <FontAwesomeIcon
             color={props.theme.accent}
             icon={faUser}
