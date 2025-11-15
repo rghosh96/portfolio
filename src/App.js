@@ -41,7 +41,7 @@ const toggleTheme = () => {
       <Switch>
         <Route exact path="/oldHomePage" component={HomePage} />
         <Route exact path="/resume" component={ResumePage} />
-        <Route exact path="/portfolio" component={ParallaxPage} />
+        <Route exact path="/" component={ParallaxPage} />
         <Route exact path="/allprojects" component={AllProjectsPage} />
       </Switch>
       </BrowserRouter>
